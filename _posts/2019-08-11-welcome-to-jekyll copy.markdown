@@ -4,12 +4,12 @@ title:  "歡迎！Welcome!"
 date:   2019-08-11 23:57:18 +08
 ---
 歡迎大家來瀏覽我剛用Jekyll建的個人網頁，
-以後我會用這個網頁發表一些主要與數據科學或者編程相關的帖文。
+以後我會用這個網頁發表一些主要與數據科學或者編程相關的帖文，
+我也會把教材放在這裡。
 
 我從未正式使用過部落格，
-因此希望大家看到我的文筆後都不要見怪，
-我會在這裡練習寫作，
-藉發表不同文章提升自己的寫作技巧和表達能力。
+因此大家看到我的文筆後都不要見怪，
+我希望藉發表不同帖文提升自己的寫作技巧和表達能力。
 
 帖文一般會用繁體中文或者英文編寫（我會盡量不用中英夾雜的語言編寫帖文），
 稍後時間我將會在這個網站設置留言版，
@@ -21,7 +21,7 @@ date:   2019-08-11 23:57:18 +08
 吳某定當細心學習。
 
 Welcome to my personal website I just built with Jekyll.
-I will create posts related to data science and programming here.
+I will create posts related to data science and programming here and list the teaching materials here.
 
 This is the first time that I actually wrote something on a blog.
 I hope my ugly writing will not ruin your day.
