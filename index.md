@@ -4,6 +4,7 @@
 
 layout: home
 show_title: true
+comments: false
 ---
 
 This is a place with the collection of my thoughts related to data science and programming.
