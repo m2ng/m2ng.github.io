@@ -19,7 +19,7 @@ I hope my ugly writing will not ruin your day.
 As a compensation, I will practise writing here by creating different blog posts. Stay tuned!
 
 The posts here will be written in either pure Traditional Chinese, pure English, or in a mixture of both languages (I will do my best to avoid this kind of stuff from happening in my website).
-If you found any mistakes in my website or thought of something interesting, feel free to send me an email or discuss with me in the guestbooks that I will create very soon.
+If you find any mistakes in my website or thought of something interesting, feel free to send me an email or discuss with me in the guestbooks that I will create very soon.
 
 Please do not hesitate to share anything that you know about data science or programming with me or other readers.
 I will be very happy to learn new things from you.
