@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+show_title: true
 ---
 
-Hi
+This is a place with the collection of my thoughts related to data science and programming.
