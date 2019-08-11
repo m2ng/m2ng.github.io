@@ -3,8 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-name: null
-title: null
+exclude: true
 ---
 
 # Hi
