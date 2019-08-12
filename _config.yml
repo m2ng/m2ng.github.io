@@ -21,8 +21,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://m2ng.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: zh_HK
 
-github_username:  m2ng
-linkedin_username: matthew-ng-85690213b
+minima:
+  social_links:
+    github:  m2ng
+    linkedin: matthew-ng-85690213b
 
 disqus:
   shortname: ngminghin
