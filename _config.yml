@@ -38,7 +38,7 @@ plugins:
 header_pages:
   - about.md
   - projects.md
-  - teaching_materials.md
+  - teaching.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
