@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Teaching materials
+title: Teaching
 permalink: /teaching/
 show_title: false
 ---
