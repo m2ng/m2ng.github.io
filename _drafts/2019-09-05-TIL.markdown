@@ -1,21 +1,15 @@
 ---
 layout: post
-title:  "TIL #1 Learnt a lot"
+title:  "TIL #1 Time management at school"
 date:   2019-09-05 19:29:00 +08
 ---
-- Time management
-  - Better find a balance among tasks
-  - Dont put most of your time on a task only
-  - Know your goal
-  - Know what is imminent
-- Do not provoke anybody you dont know (John Wick)
-  - You never know if he is/was a hitman
-- Teaching is an art
-  - How to catch students' attention
-  - Posture
-  - Repeatedly saying keywords
-  - Ask questions if necessary
-  - Show tricks
-  - Time management, again
-  - You have a brilliant plan
-  - Balance depth and breadth
+This week is the first week of school. It is a tough week, yet there are so much to learn and to reflect on.
+
+I had to work on something related to my research topic, that is to generate some simulated datasets based on the methods provided in a research paper. I also needed to write a reading report for every research paper I read as suggested by my supervisor.
+
+The problem is that I put most of my time on figuring out the data formats of the data presented in one research paper. I forgot to spend some time on writing a reading report for another paper. Not until two days before the deadline I set for myself did I find myself lacking time for writing a report.
+
+There is something I will try: Find a balance among tasks. I should spend at most 2 days for each task. If very unfortunately I still cannot finish my work at the very last moment on the last day, I will try to take a look at the whole picture by reviewing the tasks compeleted and goals attained. Once I have completed my review, I will start doing the next thing that is the most imminent. The main principle I will bear in mind is -- Never put most of my time on a task if I have more than 1 task to do.
+
+I watched John Wick these 2 days. This is a very intriguing yet funny movie. A lot of scenes made me laugh especially when Viego told his son that he once saw John Wick killed some people with a pencil. Everything's got a price!
+
