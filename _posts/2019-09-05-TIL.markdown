@@ -2,6 +2,7 @@
 layout: post
 title:  "TIL #1 Time management at school"
 date:   2019-09-05 19:29:00 +08
+tags: [TIL, "TIL-1", "time management", "John Wick"]
 ---
 This week is the first week of school. It is a tough week, yet there are so much to learn and to reflect on.
 
