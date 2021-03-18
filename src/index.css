@@ -43,13 +43,27 @@ a {
     color: hsl(159, 46%, 35%);
 }
 
-.container {
-    padding: 2em;
-    display: grid;
-    grid-template: "bar content" 1fr 
-                   "footer footer" auto / 1fr auto;
-    /* grid-template: "content bar" 1fr 
-                   "footer footer" auto / auto 1fr; */
+.section {
+    /* border: 1px dashed #777; */
+    padding: 2em .7em 0 .7em;
+}
+
+@media only screen and (min-width: 400px) {
+    .container {
+        padding: 2em;
+        display: grid;
+        grid-template: "bar content" 1fr 
+                    "footer footer" auto / 1fr auto;
+        /* grid-template: "content bar" 1fr 
+                    "footer footer" auto / auto 1fr; */
+    }
+
+    .container {
+        width: 210mm;
+        min-height: 297mm; 
+        padding-bottom: 1em;
+        margin: 0 auto;
+    }
 }
 
 @media print {
@@ -59,46 +73,42 @@ a {
     }
 }
 
-@media screen {
-    .container {
-        width: 210mm;
-        min-height: 297mm; 
-        padding-bottom: 1em;
-        margin: 0 auto;
-    }
-}
-
-.section {
-    /* border: 1px dashed #777; */
-    padding: 2em .7em 0 .7em;
-}
-
-.bar {
-    grid-area: bar;
-    border-right: none;
-    display: flex;
-    flex-flow: column nowrap;
-    padding-top: 0;
-}
-
-.bar > * {
-    display: block;
-}
-
-
-.content {
-    grid-area: content;
-    padding-top: 0;
-    margin-left: .5em;
-}
-
 .footer {
     grid-area: footer;
     font-family: "Roboto Slab", serif;
     font-size: .7em;
     color: hsl(39, 20%, 75%);
-    padding-top: 0;
-    padding-bottom: 0;
+}
+
+@media only screen and (min-width: 400px){
+    .content {
+        grid-area: content;
+        padding-top: 0;
+        margin-left: .5em;
+    }
+        
+    .bar {
+        grid-area: bar;
+        border-right: none;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 0;
+    }
+
+    .footer {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .footer {
+        padding-bottom: 5em;
+        margin: 1em 0 5em 0;
+    }
+}
+
+.bar > * {
+    display: block;
 }
 
 .footer a {
