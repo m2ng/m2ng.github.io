@@ -1,5 +1,8 @@
-# resume
-This is a new version of my résumé created using HTML, CSS, several open-source web fonts and SVGs only.
+# Résumé
+This is a new version of my résumé.
 
 ## preview
 ![preview](./resume_preview.png)
+
+## Reference
+- [https://material.io/resources/icons/?style=baseline](https://material.io/resources/icons/?style=baseline)
