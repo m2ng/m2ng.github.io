@@ -1,28 +1,47 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.bundle.js'
+        filename: 'index.bundle.js',
+        clean: true
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
+                exclude: /node_modules/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.html$/,
+                use: 'raw-loader'
             },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource'
             }
         ]
     },
-    mode: 'development',
+    devServer: {
+        contentBase: path.resolve(__dirname, './dist')
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: 'src/index.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public' }
+            ]
         })
     ]
 }
