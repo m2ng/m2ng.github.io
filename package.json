@@ -15,8 +15,17 @@
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "create": "webpack",
+    "deploy": "gh-pages --dist 'dist' --branch 'gh-pages'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +39,8 @@
   },
   "homepage": "https://github.com/m2ng/m2ng.github.io#readme",
   "dependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
