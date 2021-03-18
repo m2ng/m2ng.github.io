@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV === 'environment';
 
 
 module.exports = {
@@ -22,8 +24,13 @@ module.exports = {
                 use: 'raw-loader'
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.scss$/,
+                use: [
+                    devMode ? 'style-loader' : {
+                        loader: MiniCssExtractPlugin.loader
+                    }, 
+                    'css-loader', 
+                    'sass-loader']
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -43,8 +50,18 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'public' }
+                { 
+                    from: 'public',
+                    globOptions: {
+                        dot: true,
+                        gitignore: true,
+                        ignore: ["**/index.css"]
+                    }
+                }
             ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'assets/index.css'
         })
     ]
 }

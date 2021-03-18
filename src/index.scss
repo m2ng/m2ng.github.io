@@ -1,3 +1,5 @@
+$mobile-max-width: 640px;
+
 * {
     font-family: "Roboto", sans-serif;
     font-size: 1.01em;
@@ -10,7 +12,7 @@ html, body {
     height: 100%;
 }
 
-@media print {
+@media only print {
     html, body {
         width: 210mm;
         height: 297mm;
@@ -48,26 +50,32 @@ a {
     padding: 2em .7em 0 .7em;
 }
 
-@media only screen and (min-width: 400px) {
-    .container {
-        padding: 2em;
-        display: grid;
-        grid-template: "bar content" 1fr 
-                    "footer footer" auto / 1fr auto;
-        /* grid-template: "content bar" 1fr 
-                    "footer footer" auto / auto 1fr; */
-    }
+.container {
+    padding: 2em;
+    display: grid;
+    grid-template: "bar content" 1fr 
+                "footer footer" auto / 1fr auto;
+}
 
+@media only screen and (min-width: $mobile-max-width) {
     .container {
-        width: 210mm;
+        max-width: 210mm;
         min-height: 297mm; 
         padding-bottom: 1em;
         margin: 0 auto;
     }
 }
 
-@media print {
+@media only screen and (max-width: $mobile-max-width) {
     .container {
+        display: block;
+        padding: 2em .5em 1em .5em;
+    }
+}
+
+@media only print {
+    .container {
+        padding: .5em;
         height: 100%;
         width: 100%;
     }
@@ -78,9 +86,10 @@ a {
     font-family: "Roboto Slab", serif;
     font-size: .7em;
     color: hsl(39, 20%, 75%);
+    padding-bottom: 0;
 }
 
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: $mobile-max-width){
     .content {
         grid-area: content;
         padding-top: 0;
@@ -100,7 +109,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: $mobile-max-width) {
     .footer {
         padding-bottom: 5em;
         margin: 1em 0 5em 0;
@@ -154,7 +163,7 @@ a {
     text-align: left;
 }
 
-.contact-method > img{
+.contact-method > img, svg{
     margin: 0 .5em;
 }
 
