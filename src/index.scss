@@ -101,6 +101,7 @@ a {
         border-right: none;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
         padding-top: 0;
     }
 
@@ -109,10 +110,27 @@ a {
     }
 }
 
+.contact {
+    margin-top: 1em;
+    padding: 0 .4em;
+}
+
 @media only screen and (max-width: $mobile-max-width) {
     .footer {
         padding-bottom: 5em;
         margin: 1em 0 5em 0;
+    }
+
+    .bar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    
+    .contact {
+        margin-top: 1em;
+        // margin: 1em auto 0 auto;
+        // padding: 0 .4em;
     }
 }
 
@@ -143,11 +161,6 @@ a {
     color: hsl(39, 46%, 15%);
 }
 
-.contact {
-    margin-top: 1em;
-    padding: 0 .4em;
-}
-
 .contact-method {
     font-size: .9em;
     margin-bottom: .5em;
@@ -163,7 +176,7 @@ a {
     text-align: left;
 }
 
-.contact-method > img, svg{
+.contact-method > img, .contact-method > svg{
     margin: 0 .5em;
 }
 

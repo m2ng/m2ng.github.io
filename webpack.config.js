@@ -55,7 +55,7 @@ module.exports = {
                     globOptions: {
                         dot: true,
                         gitignore: true,
-                        ignore: ["**/index.css"]
+                        ignore: ["**/index.css", "**/*.svg"]
                     }
                 }
             ]
