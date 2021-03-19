@@ -6,6 +6,11 @@ $mobile-max-width: 640px;
     box-sizing: border-box;
 }
 
+em, strong {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 html, body {
     margin: 0;
     width: 100%;
@@ -43,6 +48,7 @@ a {
 
 .highlight.skill {
     color: hsl(159, 46%, 35%);
+    font-weight: 600;
 }
 
 .section {
@@ -51,7 +57,7 @@ a {
 }
 
 .container {
-    padding: 2em;
+    padding: 2em 1.24em;
     display: grid;
     grid-template: "bar content" 1fr 
                 "footer footer" auto / 1fr auto;
@@ -156,9 +162,11 @@ a {
     text-align: center;
     line-height: 1.4;
     padding: .5em 1em;
+    margin-bottom: .5em;
     font-size: 1.4em;
     font-weight: 600;
     color: hsl(39, 46%, 15%);
+    font-family: 'Roboto Slab', serif;
 }
 
 .contact-method {
@@ -225,7 +233,7 @@ li.skill {
 }
 
 .history {
-    margin: 1em 0 0 0;
+    margin: .6em 0 0 0;
 }
 
 
@@ -255,6 +263,7 @@ li.skill {
 }
 
 .history-field.place {
+    font-weight: 500;
     font-size: .8em;
 }
 
@@ -274,6 +283,75 @@ ul.desc {
 li.desc-item {
     /* font-family: "Roboto", sans-serif; */
     margin-bottom: 6px;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 
+li.desc-item:last-child {
+    margin-bottom: 0;
+}
+
+li.desc-item > div {
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    padding-left: .2em;
+}
+
+.experience {
+    margin-bottom: 1em;
+}
+
+.project-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.project-group {
+    flex: 1 1 0;
+    margin-top: .8em;
+    display: flex;
+    padding: 0;
+}
+
+.project-group:last-child {
+    margin-bottom: 0;
+}
+
+.project-group > .subgroup-header {
+    // display: inline-block;
+    margin-top: 0;
+    flex-shrink: 0;
+    width: 5.5em;
+    word-wrap: break-word;
+}
+
+.project-group > .project-group-list {
+    margin-left: 1.5em;
+    padding-left: .2em;
+    list-style-type: '-  ';
+}
+
+li.project {
+    font-size: .8em;
+    font-family: "Roboto Slab", serif;
+    margin-bottom: .2em;
+}
+
+li.project:last-child {
+    margin-bottom: 0;
+}
+
+li.highlight {
+    list-style-type: "\1F44D";
+}
+
+li.heart-eyes {
+    list-style-type: '\1F60D';
+}
+
+li.project > div {
+    padding-left: .2em;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+}
