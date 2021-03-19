@@ -24,6 +24,12 @@ html, body {
     }
 }
 
+@media only screen {
+    body {
+        background-color:hsl(39, 20%, 98%);
+    }
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -284,6 +290,7 @@ li.desc-item {
     /* font-family: "Roboto", sans-serif; */
     margin-bottom: 6px;
     font-family: "Roboto Slab", serif;
+    font-size: inherit;
 }
 
 li.desc-item:last-child {
@@ -293,7 +300,7 @@ li.desc-item:last-child {
 li.desc-item > div {
     font-family: inherit;
     font-style: inherit;
-    font-size: inherit;
+    font-size: 1em;
     padding-left: .2em;
 }
 
@@ -341,13 +348,20 @@ li.project:last-child {
     margin-bottom: 0;
 }
 
+
 li.highlight {
-    list-style-type: "\1F44D";
+    color: hsl(350, 60%, 50%);
+    animation: color-change 3s infinite;
 }
 
-li.heart-eyes {
-    list-style-type: '\1F60D';
+@keyframes color-change {
+    0% { color: hsl(350, 60%, 50%); }
+    25% { color: hsl(80, 60%, 40%); }
+    50% { color: hsl(170, 60%, 40%); }
+    75% { color: hsl(260, 60%, 50%); }
+    100% { color: hsl(350, 60%, 50%); }
 }
+
 
 li.project > div {
     padding-left: .2em;
