@@ -2,7 +2,8 @@ $mobile-max-width: 640px;
 
 * {
     font-family: "Roboto", sans-serif;
-    font-size: 1.01em;
+    // font-size: 1.01em;
+    // font-size: 1em;
     box-sizing: border-box;
 }
 
@@ -52,7 +53,7 @@ a {
     background-color: hsl(39, 46%, 90%);
 }
 
-.highlight.skill {
+.highlight-1 {
     color: hsl(159, 46%, 35%);
     font-weight: 600;
 }
@@ -123,7 +124,7 @@ a {
 }
 
 .contact {
-    margin-top: 1em;
+    // margin-top: .3em;
     padding: 0 .4em;
 }
 
@@ -171,7 +172,7 @@ a {
     margin-bottom: .5em;
     font-size: 1.4em;
     font-weight: 600;
-    color: hsl(39, 46%, 15%);
+    color: hsl(39, 46%, 25%);
     font-family: 'Roboto Slab', serif;
 }
 
@@ -197,7 +198,7 @@ a {
 .intro {
     line-height: 1.1;
     font-style: italic;
-    margin: 2.2em .4em 2.5em .4em;
+    margin: 1.5em .4em 1.5em .4em;
     font-size: 1em;
     font-family: "Roboto Mono", "Courier New", monospace;
 }
@@ -224,13 +225,15 @@ a {
 li.skill {
     font-family: "Roboto Slab";
     font-size: .8em;
-    color: hsl(39, 46%, 15%);
-    border: 1px solid hsl(39, 46%, 15%);
+    color: white;
+    background-color: hsl(39, 46%, 25%);
+    // border: 1px solid hsl(39, 46%, 25%);
     border-radius: 3px;
-    padding: 3px 3px;
+    padding: .2em .5em;
     margin: 0 4px 4px 0;
     flex-grow: 1;
     text-align: center;
+    user-select: none;
 }
 
 .history-container {
@@ -368,4 +371,33 @@ li.project > div {
     font-family: inherit;
     font-style: inherit;
     font-size: inherit;
+}
+
+span.tag {
+    font-family: "Roboto Slab";
+    font-size: .9em;
+    // color: white;
+    // background-color: hsl(39, 46%, 25%);
+    // border: 1px solid hsl(39, 46%, 25%);
+    border-radius: 3px;
+    padding: .1em .5em;
+    margin: 0 .1em 0 0;
+    text-align: center;
+    user-select: none;
+}
+
+li.skill, span.tag {
+    // background-color: hsl(39, 50%, 25%);
+    background-color: white;
+    border: 1px solid hsl(39, 50%, 25%);
+    color: hsl(39, 50%, 25%);
+    font-weight: 500;
+    // color: hsl(39, 50%, 98%);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+li.skill:hover, span.tag:hover {
+    border: 1px solid hsl(39, 50%, 30%);
+    background-color: hsl(39, 50%, 30%);
+    color: hsl(39, 50%, 95%);
 }
