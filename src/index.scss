@@ -387,12 +387,12 @@ span.tag {
 }
 
 li.skill, span.tag {
-    // background-color: hsl(39, 50%, 25%);
     background-color: white;
     border: 1px solid hsl(39, 50%, 25%);
     color: hsl(39, 50%, 25%);
     font-weight: 500;
-    // color: hsl(39, 50%, 98%);
+    display: inline-block;
+    margin-top: auto;
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
