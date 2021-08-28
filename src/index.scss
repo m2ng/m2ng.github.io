@@ -102,6 +102,11 @@ a {
     padding-bottom: 0;
 }
 
+.contact {
+    // margin-top: .3em;
+    padding: 0 .4em;
+}
+
 @media only screen and (min-width: $mobile-max-width){
     .content {
         grid-area: content;
@@ -123,11 +128,6 @@ a {
     }
 }
 
-.contact {
-    // margin-top: .3em;
-    padding: 0 .4em;
-}
-
 @media only screen and (max-width: $mobile-max-width) {
     .footer {
         padding-bottom: 5em;
@@ -138,12 +138,6 @@ a {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-    }
-    
-    .contact {
-        margin-top: 1em;
-        // margin: 1em auto 0 auto;
-        // padding: 0 .4em;
     }
 }
 
