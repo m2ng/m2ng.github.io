@@ -89,8 +89,9 @@ a {
     margin: 0 auto;
     grid-template:
         "me experience" auto
+        "skills experience" auto
         "skills projects" auto
-        "footer footer" auto / 220px auto;
+        "footer footer" auto / 240px auto;
     grid-column-gap: 10px;
 }
 
@@ -139,6 +140,7 @@ a {
     border-radius: 100%;
     object-fit: cover;
     margin: 0 auto;
+    box-shadow: 0 0 3px 1px hsla(39, 46%, 25%, 50%);
 }
 
 .name {
@@ -157,8 +159,6 @@ a {
     margin-bottom: .5em;
     text-align: center;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-content: space-around; */
     align-items: center;
 }
 
@@ -381,3 +381,9 @@ li.skill:hover, span.tag:hover {
     background-color: hsl(39, 50%, 30%);
     color: hsl(39, 50%, 95%);
 }
+
+// @media only print {    
+//     * {
+//         border-radius: 0px;
+//     }
+// }

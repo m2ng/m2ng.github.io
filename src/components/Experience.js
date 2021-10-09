@@ -1,4 +1,33 @@
 import React from 'react';
+import experience from '../data/experience.json';
+
+// export default function Experience() {
+//     return (
+//         <div className="experience">
+//             <div className="header">Experience</div>
+//             <div className="history-container">
+//                 {experience.map(({time, title, place, details}) => {
+//                     return (
+//                         <div className="history">
+//                             <div className="history-time">{time}</div>
+//                             <div className="history-content">
+//                                 <div className="history-field title">{title}</div>
+//                                 <div className="history-field place">{place}</div>
+//                             {details.length > 0 ? (
+//                                 <ul className="history-field desc">
+//                                     {details.map(detail => (
+//                                         <li className="desc-item"><div>{detail}</div></li>
+//                                     ))}
+//                                 </ul>
+//                             ) : ''}
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//             </div>
+//         </div>
+//     )
+// }
 
 export default function Experience() {
   return (

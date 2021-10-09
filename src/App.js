@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import Me from './components/Me';
 import Skills from './components/Skills';
