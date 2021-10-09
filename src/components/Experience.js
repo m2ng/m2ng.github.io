@@ -41,6 +41,13 @@ export default function Experience() {
                   <div className="history-field title">Data Scientist</div>
               </div>
           </div>
+          <div className="history present">
+              <div className="history-time">Oct 2021 &mdash; Present</div>
+              <div className="history-content">
+                  <div className="history-field place">The Chinese University of Hong Kong</div>
+                  <div className="history-field title">Part-time Research Assistant</div>
+              </div>
+          </div>
           <div className="history">
               <div className="history-time"><span>July 2019 &mdash; June 2021</span></div>
               <div className="history-content">
