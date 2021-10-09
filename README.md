@@ -1,7 +1,7 @@
 # Résumé
 This is a new version of my résumé.
 
-## preview
+## Preview
 ![preview](./resume_preview.png)
 
 ## Reference
