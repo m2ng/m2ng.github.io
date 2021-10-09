@@ -91,7 +91,7 @@ a {
         "me experience" auto
         "skills experience" auto
         "skills projects" auto
-        "footer footer" auto / 240px auto;
+        "footer footer" auto / auto 54ch;
     grid-column-gap: 10px;
 }
 
@@ -239,13 +239,14 @@ li.skill {
 .history-field {
     /* margin-left: 2em; */
     margin-left: .8em;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
     font-size: .8em;
 }
 
 .history-time {
-    font-size: .8em;
+    font-size: .9em;
     margin-left: 0;
+    margin-top: .5em;
     margin-bottom: .5em;
     font-weight: 700;
     color: hsla(39, 70%, 35%);
@@ -264,8 +265,11 @@ li.skill {
 .history-field.degree, .history-field.title {
     font-size: .8em;
     font-weight: 500;
-    // padding-bottom: 10px;
     margin-bottom: 10px;
+}
+
+.history-field:last-child {
+    margin-bottom: 0;
 }
 
 ul.desc {
@@ -289,6 +293,7 @@ li.desc-item > div {
     font-style: inherit;
     font-size: 1em;
     padding-left: .2em;
+    line-height: 1.5;
 }
 
 .project-container {
