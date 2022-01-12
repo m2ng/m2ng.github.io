@@ -12,8 +12,8 @@ export default function Me() {
           <li className="contact-method"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><a href="https://m2ng.github.io">m2ng.github.io</a></li>
       </ul>
       <div className="intro">
-          <p><strong>{">"}</strong> Hi, I am <strong>Matthew</strong>. </p>
-          <p><strong>{">"}</strong> I have a very strong interest in data, particularly in <span className="highlight-1">data science</span>, <span className="highlight-1">machine learning</span> and <span className="highlight-1">big data</span>. My willingness to learn allows me to familiarize myself with new things quickly and be open to others' opinions.</p>
+          <p><strong>{">"}</strong> Hi, my name is <strong>Matthew</strong>. I am a Data Scientist. </p>
+          <p><strong>{">"}</strong> I have a very strong interest in data, particularly in <span className="highlight-1">data science</span>, <span className="highlight-1">deep learning</span> and <span className="highlight-1">big data</span>. My willingness to learn allows me to familiarize myself with new things quickly and be open to others' opinions.</p>
       </div>
     </div>
   );

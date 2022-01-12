@@ -14,6 +14,10 @@ export default function Skills() {
               <li className="skill">Spark</li>
               <li className="skill">Hadoop</li>
               <li className="skill">Big data</li>
+              <li className="skill">AWS</li>
+              <li className="skill">Alibaba Cloud</li>
+              <li className="skill">Firebase Analytics</li>
+              <li className="skill">Elasticsearch</li>
           </ul>
       </div>
       <div className="skills-subgroup">
@@ -27,11 +31,19 @@ export default function Skills() {
           </ul>
       </div>
       <div className="skills-subgroup">
-          <div className="subgroup-header">Web-related</div>
+          <div className="subgroup-header">Web &amp; App</div>
           <ul className="skills-list">
+              <li className="skill">React.js</li>
+              <li className="skill">React Native</li>
               <li className="skill">CSS</li>
               <li className="skill">Javascript</li>
-              <li className="skill">React.js</li>
+          </ul>
+      </div>
+      <div className="skills-subgroup">
+          <div className="subgroup-header">Project management</div>
+          <ul className="skills-list">
+              <li className="skill">Agile</li>
+              <li className="skill">Jira</li>
           </ul>
       </div>
     </div>

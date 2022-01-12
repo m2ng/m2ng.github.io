@@ -1,11 +1,49 @@
 [
     {
-        "time": "July 2021 \u2014 Present",
-        "title": "Data Scientist",
+        "time": "July 2021 - Present",
+        "effective": true,
         "place": "LORA Technogoies",
+        "title": "Data Scientist",
+        "nature": "job",
         "details": [
-            "abc",
-            "def"
+            "Designed and established the complete data architecture and pipeline for mobile app analytics",
+            "Front-end development for mobile app analytics",
+            "Deployed data applications such as data visualization tool and data streaming service with Kubernetes"
+        ]
+    },
+    {
+        "time": "Oct 2021 - Present",
+        "effective": true,
+        "place": "The Chinese University of Hong Kong",
+        "title": "Part-time Research Assistant",
+        "nature": "job",
+        "details": [
+            "!!Equipped myself with a set of transferable problem-solving skills during research",
+            "Developed a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals",
+            "Tags: #C++_&_OpenMP #Parallel_computing #Big_data_analysis"
+        ]
+    },
+    {
+        "time": "June 2018 - July 2019",
+        "effective": false,
+        "place": "Hong Kong Telecom",
+        "title": "Data Science Analyst",
+        "nature": "job",
+        "details": [
+            "Designed and developed the #recommender_system for an e-commerce platform",
+            "Enabled streaming of web analytics data to a #MongoDB database",
+            "User behavior analysis driven by #Apache_Spark"
+        ]
+    },
+    {
+        "time": "Sep 2014 - July 2018",
+        "effective": false,
+        "place": "The Chinese University of Hong Kong",
+        "title": "BSc in Statistics (CGPA: 3.363 / 4.000)",
+        "nature": "degree",
+        "details": [
+            "Programming coursework: #Python #Excel_&_VBA #Java #R",
+            "Department of Statistics Scholarship 2015/16, 2017/18; Academic Merit in 07/2017; Advantage Trust Statistics Scholarship 2015/2016"
         ]
     }
 ]
