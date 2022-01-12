@@ -1,0 +1,45 @@
+[
+    {
+        "group": "Data-related",
+        "skills": [
+            "#TensorFlow",
+            "#Jupyter_stack",
+            "#Tableau",
+            "#SQL",
+            "#Spark",
+            "#Big_data",
+            "#AWS",
+            "#Alibaba_Cloud",
+            "#Firebase_Analytics",
+            "#Elasticsearch"
+        ]
+    },
+    {
+        "group": "Programming languages",
+        "skills": [
+            "#Python",
+            "#C++",
+            "#Java",
+            "#R",
+            "#Excel_VBA"
+        ]
+    },
+    {
+        "group": "Web & App",
+        "skills": [
+            "#React.js",
+            "#React_Native",
+            "#CSS",
+            "#Javascript",
+            "#FastAPI",
+            "#Django"
+        ]
+    },
+    {
+        "group": "Project management",
+        "skills": [
+            "#Agile",
+            "#Jira"
+        ]
+    }
+]

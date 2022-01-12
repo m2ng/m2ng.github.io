@@ -1,0 +1,23 @@
+[
+    {
+        "group": "Machine learning for business",
+        "details": [
+            "!!E-commerce recommender system",
+            "!!Transform product name and product description into comparable numeric vectors"
+        ]
+    },
+    {
+        "group": "Machine learning",
+        "details": [
+            "!!Passenger Screening Algorithm Challenge",
+            "Predicting winning probabilities in HK horse racing"
+        ]
+    },
+    {
+        "group": "Data acquisition",
+        "details": [
+            "!!Stream web analytics data to MongoDB",
+            "Create profiles for websites"
+        ]
+    }
+]
