@@ -15,7 +15,7 @@ export default function Experience() {
                 <div className="history-content">
                     <div className="history-field place">{place}</div>
                     <div className="history-field title">{title}</div>
-                    <hr/>
+                    {/* <hr/> */}
                     <ul className="history-field desc">
                         {details.map((row, j) => {
                           const [ parsedRow, highlight ] = rowParse(row);
