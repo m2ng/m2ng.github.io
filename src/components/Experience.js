@@ -12,7 +12,7 @@ export default function Experience() {
                 <div className="history-time">{
                   effective ? time : <span>{time}</span>
                 }</div>
-                <div className="history-content">
+                <div className={"history-content" + (effective ? " present" : "")}>
                     <div className="history-field place">{place}</div>
                     <div className="history-field title">{title}</div>
                     {/* <hr/> */}

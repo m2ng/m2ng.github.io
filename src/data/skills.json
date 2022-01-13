@@ -3,11 +3,11 @@
         "group": "Data-related",
         "skills": [
             "#TensorFlow",
-            "#Jupyter_stack",
+            "#Jupyterlab",
             "#Tableau",
             "#SQL",
-            "#Spark",
-            "#Big_data",
+            "#Apache_Spark",
+            "#Apache_Kafka",
             "#AWS",
             "#Alibaba_Cloud",
             "#Firebase_Analytics",
@@ -18,6 +18,7 @@
         "group": "Programming languages",
         "skills": [
             "#Python",
+            "#JavaScript",
             "#C++",
             "#Java",
             "#R",
@@ -30,7 +31,6 @@
             "#React.js",
             "#React_Native",
             "#CSS",
-            "#Javascript",
             "#FastAPI",
             "#Django"
         ]

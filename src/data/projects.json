@@ -3,21 +3,22 @@
         "group": "Machine learning for business",
         "details": [
             "!!E-commerce recommender system",
-            "!!Transform product name and product description into comparable numeric vectors"
+            "!!Deep-learning based stock trend clustering",
+            "!!Natural language processing for e-commerce products"
+        ]
+    },
+    {
+        "group": "Data warehousing & management",
+        "details": [
+            "Mobile analytics driven by Alibaba LogHub (more cost-effective alternative to Apache Kafka)",
+            "Data integration pipeline for logs",
+            "Stream web analytics data to MongoDB"
         ]
     },
     {
         "group": "Machine learning",
         "details": [
-            "!!Passenger Screening Algorithm Challenge",
-            "Predicting winning probabilities in HK horse racing"
-        ]
-    },
-    {
-        "group": "Data acquisition",
-        "details": [
-            "!!Stream web analytics data to MongoDB",
-            "Create profiles for websites"
+            "Computer vision in Passenger Screening Algorithm Challenge"
         ]
     }
 ]

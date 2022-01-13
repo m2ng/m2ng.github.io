@@ -146,10 +146,19 @@ a {
 .name {
     text-align: center;
     line-height: 1.4;
-    padding: .5em 1em;
-    margin-bottom: .5em;
+    padding: .5em 1em 0 1em;
     font-size: 1.4em;
     font-weight: 600;
+    color: hsl(39, 46%, 25%);
+    font-family: 'Roboto Slab', serif;
+}
+.me > .title {
+    text-align: center;
+    line-height: 1.4;
+    padding: .2em 1em .5em 1em;
+    margin-bottom: .8em;
+    font-size: 1em;
+    font-weight: 300;
     color: hsl(39, 46%, 25%);
     font-family: 'Roboto Slab', serif;
 }
@@ -236,6 +245,10 @@ li.skill {
     margin: 0 .2em;
 }
 
+.history-content.present {
+    border-left: 3px solid hsl(39, 46%, 35%);
+    margin: 0 .2em;
+}
 
 .history-field {
     /* margin-left: 2em; */
@@ -317,7 +330,7 @@ li.desc-item > div {
     // display: inline-block;
     margin-top: 0;
     flex-shrink: 0;
-    width: 5.5em;
+    width: 6em;
     word-wrap: break-word;
 }
 
@@ -330,7 +343,7 @@ li.desc-item > div {
 li.project {
     font-size: .8em;
     font-family: "Roboto Slab", serif;
-    margin-bottom: .2em;
+    margin-bottom: .4em;
 }
 
 li.project:last-child {

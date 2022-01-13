@@ -7,8 +7,8 @@
         "nature": "job",
         "details": [
             "Designed and established the complete data architecture and pipeline for mobile app analytics",
-            "Front-end development for mobile app analytics",
-            "Deployed data applications such as data visualization tool and data streaming service with Kubernetes"
+            "Deployed data applications such as data visualization tool and data streaming service with #Kubernetes",
+            "Provided ad-hoc technical support for the software development team"
         ]
     },
     {
@@ -17,6 +17,14 @@
         "place": "The Chinese University of Hong Kong",
         "title": "Part-time Research Assistant",
         "nature": "job",
+        "details": []
+    },
+    {
+        "time": "July 2019 — June 2021",
+        "effective": false,
+        "place": "The Chinese University of Hong Kong",
+        "title": "MPhil in Statistics (CGPA: 3.910 / 4.000)",
+        "nature": "degree",
         "details": [
             "!!Equipped myself with a set of transferable problem-solving skills during research",
             "Developed a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals",
