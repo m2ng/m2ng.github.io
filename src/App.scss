@@ -1,4 +1,4 @@
-$mobile-max-width: 640px;
+$mobile-max-width: 768px;
 
 em, strong {
     font-family: inherit;
@@ -47,7 +47,7 @@ a {
 }
 
 .highlight-1 {
-    color: hsl(159, 46%, 35%);
+    color: hsl(160, 83%, 84%);
     font-weight: 600;
 }
 
@@ -78,21 +78,44 @@ a {
     font-size: .7em;
     color: hsl(39, 20%, 75%);
     padding-bottom: 0;
-    margin: 5em 0 2em 0;
+    // margin: 5em 0 2em 0;
 }
 
 .container {
-    padding: 2em 1.24em;
     display: grid;
-    max-width: 210mm;
+    padding: 2em 1.24em;
     padding-bottom: 1em;
     margin: 0 auto;
     grid-template:
-        "me experience" auto
-        "skills experience" auto
-        "skills projects" auto
-        "footer footer" auto / auto 54ch;
-    grid-column-gap: 10px;
+        "left right" auto
+        "footer footer" auto / auto 58ch;
+    grid-column-gap: 12px;
+    grid-row-gap: 1em;
+}
+@media only screen and (min-width: calc($mobile-max-width + 1px)) {
+    .container > .column {
+        display: flex;
+        flex-flow: column;
+    }
+    .left {
+        grid-area: left;
+        // width: calc($mobile-max-width - 48ch);
+    }
+    .right {
+        grid-area: right;
+        // width: 48ch;
+    }
+    .container {
+        max-width: $mobile-max-width;
+    }
+}
+
+.experience-container {
+    margin-bottom: .8em;
+}
+
+.experience-container:last-child {
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: $mobile-max-width) {
@@ -108,15 +131,17 @@ a {
     .container {
         margin: 0;
         padding: .5em;
+        max-width: 210mm;
         max-height: 297mm;
     }
 }
 
 .contact {
-    padding: 0 .4em;
+    padding: 0 .4em 0 0;
+    // align-self: flex-start;
 }
 
-@media only screen and (min-width: $mobile-max-width){
+@media only screen and (min-width: calc($mobile-max-width + 1px)){
     .footer {
         padding-bottom: 0;
     }
@@ -135,8 +160,8 @@ a {
 }
 
 .profile-pic {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     border-radius: 100%;
     object-fit: cover;
     margin: 0 auto;
@@ -183,7 +208,7 @@ a {
 .intro {
     line-height: 1.1;
     font-style: italic;
-    margin: 1.5em .4em 1.5em .4em;
+    margin: 1em .4em 1.5em .4em;
     font-size: 1em;
     font-family: "Roboto Mono", "Courier New", monospace;
 }
@@ -208,7 +233,7 @@ a {
 .skills-list {
     display: flex;
     flex-flow: row wrap;
-    margin-top: 9px;
+    margin-top: .3em;
 }
 
 li.skill {
@@ -222,16 +247,20 @@ li.skill {
     margin: 0 4px 4px 0;
     flex-grow: 1;
     text-align: center;
-    user-select: none;
 }
 
 .history-container {
+    padding: .4em 0 .2em 0;
     display: flex;
     flex-flow: column nowrap;
 }
 
 .history {
-    margin: .6em 0 0 0;
+    margin: 0 0 .2em 0;
+}
+
+.history:last-child {
+    margin-bottom: 0;
 }
 
 .history hr {
@@ -257,9 +286,20 @@ li.skill {
     font-size: .8em;
 }
 
+.history-field.names {
+    font-family: 'Roboto Slab';
+    align-items: center;
+    padding: .1em 0;
+    // justify-content: center;
+}
+
+.history-field > span {
+    display: inline-block;
+}
+
 .history-time {
-    font-size: .9em;
-    margin-left: 0;
+    // font-size: .9em;
+    // margin-left: 0;
     margin-top: .5em;
     margin-bottom: .5em;
     font-weight: 700;
@@ -270,16 +310,9 @@ li.skill {
     color: hsla(39, 20%, 55%, 100%);
 }
 
-.history-field.place {
+.degree, .position, .place {
     font-weight: 600;
-    font-style: italic;
-    font-size: .8em;
-}
-
-.history-field.degree, .history-field.title {
-    font-size: .8em;
-    font-weight: 500;
-    margin-bottom: 7px;
+    // margin-bottom: 7px;
 }
 
 .history-field:last-child {
@@ -353,7 +386,7 @@ li.project:last-child {
 
 li.highlight {
     color: hsl(350, 60%, 50%);
-    animation: color-change 3s infinite;
+    // animation: color-change 3s infinite;
 }
 
 @keyframes color-change {
@@ -382,7 +415,6 @@ span.tag {
     padding: .1em .5em;
     margin: 0 .1em 0 0;
     text-align: center;
-    user-select: none;
 }
 
 li.skill, span.tag {
@@ -395,11 +427,11 @@ li.skill, span.tag {
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-li.skill:hover, span.tag:hover {
-    border: 1px solid hsl(39, 50%, 30%);
-    background-color: hsl(39, 50%, 30%);
-    color: hsl(39, 50%, 95%);
-}
+// li.skill:hover, span.tag:hover {
+//     border: 1px solid hsl(39, 50%, 30%);
+//     background-color: hsl(39, 50%, 30%);
+//     color: hsl(39, 50%, 95%);
+// }
 
 // @media only print {    
 //     * {
