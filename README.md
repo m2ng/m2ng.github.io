@@ -16,3 +16,9 @@ docker run --name m2ng-github-io-dev \
     -p 3000:3000 \
     m2ng-github-io-dev
 ```
+
+## Build website
+```bash
+docker build -t m2ng-github-io-dev --target dev .
+docker run --rm --entrypoint /bin/sh -v "$PWD/build:/app/build" -v "$PWD/public:/app/public" -v "$PWD/src:/app/src" m2ng-github-io-dev -c "npm run build"
+```
