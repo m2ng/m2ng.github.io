@@ -1,6 +1,15 @@
 /node_modules
+
+# Files made in the root directory when building the website
 /build
 /blog
 /assets
 /static
 **/.jekyll-cache
+
+# Static files
+/*.ico
+/*.html
+/logo*.png
+/manifest.json
+/robots.txt
