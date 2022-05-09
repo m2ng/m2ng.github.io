@@ -1,5 +1,5 @@
 ---
 layout: page
 title: About
-url: /
+url: https://m2ng.github.io/
 ---
