@@ -1,5 +1,6 @@
 #!/bin/sh
 
+mkdir -p $PWD/build
 docker build -t m2ng-github-io-dev --target dev .
 docker run \
     --rm --entrypoint /bin/sh \

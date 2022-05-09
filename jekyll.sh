@@ -10,6 +10,7 @@ make () {
 
 build () {
   export site_name="m2ng"
+  mkdir -p $PWD/build/blog
   docker run --rm \
     -v "$PWD/build/blog:/tmp/build" \
     -v "$PWD/src/jekyll:/srv/jekyll" \
