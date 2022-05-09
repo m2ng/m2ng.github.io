@@ -3,7 +3,7 @@ import React from 'react';
 export default function Me() {
   return (
     <div className="me">
-      <img className="profile-pic" src="assets/NGMingHin_pic.jpg" alt="profile"></img>
+      <img className="profile-pic" src="/assets/NGMingHin_pic.jpg" alt="profile"></img>
       <div className="name">NG Ming Hin</div>
       <div className="title">Data Scientist <br/>&amp;<br/> Research Assistant</div>
       <ul className="contact">
