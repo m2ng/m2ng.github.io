@@ -2,7 +2,7 @@ import tags from '../data/tags.json';
 
 export const parseTag = (raw, section) => {
   const tagName = raw.replace(/#/g, "").replace(/_/g, " ").replace(/\s{2,}/, "_");
-  const tooltips = tags.filter(x => x.section == section).flatMap(x => x.tags).filter(x => x.name == tagName).flatMap(x => x.tooltip);
+  const tooltips = tags.filter(x => x.section === section).flatMap(x => x.tags).filter(x => x.name === tagName).flatMap(x => x.tooltip);
 
   return [tagName, !!tooltips.length ? tooltips[0] : null];
 }

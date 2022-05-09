@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './App.scss';
 import Me from './components/Me';
 import Skills from './components/Skills';
