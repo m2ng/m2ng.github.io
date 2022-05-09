@@ -13,7 +13,7 @@ export default function Projects() {
                     <div className="subgroup-header">{group}</div>
                     <ul className="project-group-list">
                         {details.map((row, j) => {
-                            const [ parsedRow, highlight ] = rowParse(row);
+                            const [ parsedRow, highlight ] = rowParse(row, 'projects');
                             return <li className={"project" + (highlight ? " highlight" : "")} key={`proj-${i}-${j}`}><div>{parsedRow}</div></li>
                         })}
                     </ul>

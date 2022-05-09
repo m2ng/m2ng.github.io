@@ -408,13 +408,32 @@ li.project > div {
 span.tag {
     font-family: "Roboto Slab";
     font-size: .9em;
-    // color: white;
-    // background-color: hsl(39, 46%, 25%);
-    // border: 1px solid hsl(39, 46%, 25%);
     border-radius: 3px;
     padding: .1em .5em;
     margin: 0 .1em 0 0;
     text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: hsl(39, 40%, 33%);
+    color: white;
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    max-width: 30ch;
+    border-radius: 3px;
+    padding: .5em .8em .7em .8em;
+    margin: .3em 0 0 -.6em;
+    text-align: left;
+    display: block;
+    top: -100vh;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+li.skill:hover > .tooltip, span.tag:hover > .tooltip {
+    top: initial;
+    opacity: 1;
 }
 
 li.skill, span.tag {
@@ -424,17 +443,5 @@ li.skill, span.tag {
     font-weight: 500;
     display: inline-block;
     margin-top: auto;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    // transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
-
-// li.skill:hover, span.tag:hover {
-//     border: 1px solid hsl(39, 50%, 30%);
-//     background-color: hsl(39, 50%, 30%);
-//     color: hsl(39, 50%, 95%);
-// }
-
-// @media only print {    
-//     * {
-//         border-radius: 0px;
-//     }
-// }

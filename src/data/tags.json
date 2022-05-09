@@ -1,0 +1,15 @@
+[
+    {
+        "section": "experience",
+        "tags": [
+            {
+                "name": "Kubernetes",
+                "tooltip": "Lorem ipsum"
+            },
+            {
+                "name": "recommender system",
+                "tooltip": "I have 4 years' experience in data science including 2 years' work experience and 2 years' research experience."
+            }
+        ]
+    }
+]

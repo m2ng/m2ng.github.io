@@ -23,7 +23,7 @@ function HistoryContainer({historyNature}) {
                       </div>
                       <ul className="history-field desc">
                           {details.map((row, j) => {
-                            const [ parsedRow, highlight ] = rowParse(row);
+                            const [ parsedRow, highlight ] = rowParse(row, "experience");
                             return <li className={"desc-item" + (highlight ? " highlight" : "")} key={`exp-${i}-${j}`}><div>{parsedRow}</div></li>
                           })}
                       </ul>

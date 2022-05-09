@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.scss';
 import Me from './components/Me';
 import Skills from './components/Skills';
@@ -8,7 +9,6 @@ import { useMediaQuery } from './components/Hooks';
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
-  
   return (
     isDesktop ? (
       <div className="container">
