@@ -4,17 +4,19 @@ WORKDIR /app
 
 RUN apk add git
 
-RUN adduser -h /app -G node -D app
+RUN chown -R 1000:1000 /app
 
-COPY --chown=app:node package.json .
+# RUN adduser -h /app -G node -D app
 
-RUN chown -R app:node /app
+COPY package.json .
 
-USER app
+# RUN chown -R app:node /app
+
+# USER app
 
 RUN npm install
 
-COPY --chown=app:node .git .
+COPY .git .
 
 RUN git config user.name m2ng
 
