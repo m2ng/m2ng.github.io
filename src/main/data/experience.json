@@ -16,7 +16,7 @@
         "nature": "job",
         "details": [
             "Lead a mobile app analytics project and establish the data architecture and data pipeline",
-            "Build and deploy a full-stack containerized application for users to create and manage jobs",
+            "Build and deploy a full-stack containerized application to enable job submission to a task queue",
             "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"
         ]
     },
