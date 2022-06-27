@@ -1,20 +1,30 @@
 [
     {
-        "time": "July 2021 — Present",
+        "time": "Jun 2022 — Present",
         "effective": true,
-        "place": "LORA Technogoies",
+        "place": "HSBC Global Services (Hong Kong) Limited",
+        "url": "https://www.hsbc.com.hk/",
+        "title": "Data Scientist",
+        "nature": "job"
+    },
+    {
+        "time": "July 2021 — Jun 2022",
+        "effective": false,
+        "place": "LORA Technologies",
+        "url": "https://www.asklora.ai/",
         "title": "Data Scientist",
         "nature": "job",
         "details": [
-            "Designed and established the complete data architecture and pipeline for mobile app analytics",
-            "Deployed data applications such as data visualization tool and data streaming service with #Kubernetes",
-            "Provided ad-hoc technical support for the software development team"
+            "Lead a mobile app analytics project and establish the data architecture and data pipeline",
+            "Build and deploy a full-stack containerized application for users to create and manage jobs",
+            "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"
         ]
     },
     {
-        "time": "Oct 2021 — Present",
-        "effective": true,
+        "time": "Oct 2021 — Jun 2022",
+        "effective": false,
         "place": "The Chinese University of Hong Kong",
+        "url": "https://www.sta.cuhk.edu.hk/",
         "title": "Part-time Research Assistant",
         "nature": "job",
         "details": []
@@ -26,18 +36,19 @@
         "title": "MPhil in Statistics (CGPA: 3.910 / 4.000)",
         "nature": "degree",
         "details": [
-            "Developed a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
+            "Develop a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
         ]
     },
     {
         "time": "Jun 2018 — Jul 2019",
         "effective": false,
         "place": "Hong Kong Telecom",
+        "url": "https://www.hkt.com/",
         "title": "Data Science Analyst",
         "nature": "job",
         "details": [
-            "Designed and developed the #recommender_system for an e-commerce platform",
-            "Enabled streaming of web analytics data to a #MongoDB database",
+            "Design and develop the #recommender_system for an e-commerce platform",
+            "Enable streaming of web analytics data to a #MongoDB database",
             "User behavior analysis driven by #Apache_Spark"
         ]
     },
@@ -55,6 +66,7 @@
         "time": "Jun 2017 — Aug 2017",
         "effective": false,
         "place": "Census & Statistics Department",
+        "url": "https://www.censtatd.gov.hk/",
         "title": "Summer Intern",
         "nature": "job",
         "details": []
