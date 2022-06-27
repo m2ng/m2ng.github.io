@@ -9,31 +9,28 @@ function HistoryContainer({historyNature}) {
       {
         experience
         .filter(({nature}) => nature === historyNature)
-        .map(({time, effective, title, place, details}, i) => (
+        .map(({time, effective, title, place, url, details}, i) => (
           <div className={"history" + (effective ? " present" : "")} key={`exp-${i}`}>
               <div className="history-time subgroup-header">{
                 effective ? time : <span>{time}</span>
               }</div>
               <div className={"history-content" + (effective ? " present" : "")}>
-                  { (details.length > 0) ? (
                     <>
                       <div className="history-field names">
                         <span className="position">{title}&nbsp;</span>
-                        <span className="place">{"@"}&nbsp;{place}</span>
+                        <span className="place">{"@"}&nbsp;{
+                          (!!url && url.length > 0 ) ? <a href={url}>{place}</a> : place
+                        }</span>
                       </div>
+                    { (!!details && details.length > 0) && (
                       <ul className="history-field desc">
                           {details.map((row, j) => {
                             const [ parsedRow, highlight ] = rowParse(row, "experience");
                             return <li className={"desc-item" + (highlight ? " highlight" : "")} key={`exp-${i}-${j}`}><div>{parsedRow}</div></li>
                           })}
-                      </ul>
+                      </ul>)
+                    }
                     </>
-                  ) : (<>
-                    <div className="history-field names">
-                      <span className="position">{title}&nbsp;</span>
-                      <span className="place">{"@"}&nbsp;{place}</span>
-                    </div>
-                  </>)}
               </div>
           </div>
         ))

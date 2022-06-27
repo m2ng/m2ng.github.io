@@ -314,6 +314,14 @@ li.skill {
     // margin-bottom: 7px;
 }
 
+.place a {
+    color: inherit;
+}
+
+.place a:hover {
+    text-decoration: underline;
+}
+
 .history-field:last-child {
     margin-bottom: 0;
 }
