@@ -30,7 +30,7 @@ build () {
     -v "$PWD/build/blog:/tmp/build" \
     -v "$PWD/src/jekyll:/srv/jekyll" \
     -it $IMAGE_NAME \
-    sh -c "chown -R jekyll /usr/gem/ && mkdir -p /tmp/build && chown -R jekyll /tmp/build && cd $site_name && bundle exec jekyll build -d /tmp/build"
+    sh -c "chown -R jekyll /usr/gem/ && mkdir -p /tmp/build && chown -R jekyll /tmp/build && cd $site_name && bundle exec jekyll build -d /tmp/build && rm -rf .jekyll-cache"
 }
 
 arg1=`echo "$1" | xargs`
