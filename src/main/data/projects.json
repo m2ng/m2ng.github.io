@@ -1,1 +1,19 @@
-[]
+[
+    {
+        "group": "Machine learning",
+        "details": [
+            "!!E-commerce recommender system",
+            "!!Deep-learning based stock trend clustering",
+            "!!Natural language processing for e-commerce products",
+            "Computer vision in Passenger Screening Algorithm Challenge"
+        ]
+    },
+    {
+        "group": "Data engineering",
+        "details": [
+            "Mobile analytics driven by Alibaba LogHub (more cost-effective alternative to Apache Kafka)",
+            "Data integration pipeline for logs",
+            "Stream web analytics data to MongoDB"
+        ]
+    }
+]

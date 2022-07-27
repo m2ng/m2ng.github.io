@@ -4,7 +4,7 @@ import skills from '../data/skills.json';
 
 export default function Skills() {
   return (
-    <div className="skills">
+    <div className="skills subcontainer">
       <div className="header">Skills</div>
       {
           skills.map(({ group, skills }, i) => (
@@ -12,7 +12,7 @@ export default function Skills() {
                 <div className="subgroup-header">{group}</div>
                 <ul className="skills-list">
                     {skills.map((row, j) => {
-                        return <li className="skill" key={`li-skill-${i}-${j}`}>{parseTag(row)}</li>;
+                        return <li className="skill tag" key={`li-skill-${i}-${j}`}>{parseTag(row)}</li>;
                     })}
                 </ul>
             </div>

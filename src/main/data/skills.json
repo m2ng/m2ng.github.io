@@ -3,7 +3,9 @@
         "group": "Data-related",
         "skills": [
             "#TensorFlow",
-            "#Jupyterlab",
+            "#PyTorch",
+            "#LightGBM",
+            "#Gensim",
             "#Tableau",
             "#SQL",
             "#Apache_Spark",

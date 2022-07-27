@@ -5,7 +5,7 @@ import projects from '../data/projects.json';
 export default function Projects() {
   return (
     !!projects.length && (
-    <div className="projects">
+    <div className="projects subcontainer">
       <div className="header">Projects</div>
       <div className="project-container">
           {projects.map(({ group, details }, i) => {

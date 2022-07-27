@@ -64,7 +64,6 @@ a {
 
 .experience {
     grid-area: experience;
-    margin-bottom: 1em;
 }
 
 .projects {
@@ -91,6 +90,11 @@ a {
     grid-column-gap: 12px;
     grid-row-gap: 1em;
 }
+
+.subcontainer {
+    margin-bottom: .8em
+}
+
 @media only screen and (min-width: calc($mobile-max-width + 1px)) {
     .container > .column {
         display: flex;
@@ -107,14 +111,6 @@ a {
     .container {
         max-width: $mobile-max-width;
     }
-}
-
-.experience-container {
-    margin-bottom: .8em;
-}
-
-.experience-container:last-child {
-    margin-bottom: 0;
 }
 
 @media only screen and (max-width: $mobile-max-width) {
@@ -189,16 +185,20 @@ a {
 
 .contact-method {
     font-size: .9em;
-    margin-bottom: .5em;
+    margin-bottom: .4em;
     text-align: center;
     display: flex;
     align-items: center;
 }
 
-.contact-method > span {
-    flex-grow: 1;
-    text-align: left;
+.contact-method:last-child {
+    margin-bottom: .8em;
 }
+
+// .contact-method > span {
+//     flex-grow: 1;
+//     text-align: left;
+// }
 
 .contact-method > img, .contact-method > svg{
     margin: 0 .5em;
@@ -207,7 +207,7 @@ a {
 .intro {
     line-height: 1.1;
     font-style: italic;
-    margin: 1em .4em 1.5em .4em;
+    margin: 1em .4em;
     font-size: 1em;
     font-family: "Roboto Mono", "Courier New", monospace;
 }
@@ -224,28 +224,37 @@ a {
 }
 
 .subgroup-header {
-    margin-top: .8em;
+    // margin-top: 1em;
     font-weight: 500;
     font-size: .9em;
+}
+
+.skills-subgroup {
+    margin-top: 1em;
 }
 
 .skills-list {
     display: flex;
     flex-flow: row wrap;
-    margin-top: .3em;
+    margin-top: .2em;
+    column-gap: .5em;
+    row-gap: .1em;
+}
+
+.tag {
+    color: hsl(39, 50%, 25%);
+    font-weight: 500;
+    text-decoration: underline dotted hsl(39, 36%, 45%);
+    display: inline-block;
+    margin-top: auto;
+    font-family: "Roboto Slab";
+    text-align: center;
 }
 
 li.skill {
-    font-family: "Roboto Slab";
     font-size: .8em;
-    color: white;
-    background-color: hsl(39, 46%, 25%);
-    // border: 1px solid hsl(39, 46%, 25%);
-    border-radius: 3px;
-    padding: .2em .5em;
-    margin: 0 4px 4px 0;
-    flex-grow: 1;
-    text-align: center;
+    padding: .3em 0;
+    flex: 0 0 auto;
 }
 
 .history-container {
@@ -255,7 +264,9 @@ li.skill {
 }
 
 .history {
-    margin: 0 0 .2em 0;
+    margin: 0 0 .8em 0;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .history:last-child {
@@ -268,28 +279,38 @@ li.skill {
     border-bottom: none;
 }
 
-.history-content {
-    border-left: 1px solid hsl(39, 46%, 35%);
-    margin: 0 .2em;
+.history > div.history-field.names {
+    flex: 1 0 50%;
 }
 
-.history-content.present {
-    border-left: 3px solid hsl(39, 46%, 35%);
-    margin: 0 .2em;
+.history > div.history-time {
+    flex: 0 0 auto;
+}
+
+.history > div.full-row {
+    flex: 0 0 100%;
+}
+
+.history-header {
+    font-size: .8em;
+    margin: .5em 0;
+}
+
+.history-header.names {
+    flex: 1 1 0;
+    font-family: 'Roboto Slab';
+    padding-right: 4em;
+}
+
+.history-header.names > .place {
+    display: inline-block;
 }
 
 .history-field {
     /* margin-left: 2em; */
-    margin-left: .8em;
+    // margin-left: .8em;
     margin-bottom: .3em;
     font-size: .8em;
-}
-
-.history-field.names {
-    font-family: 'Roboto Slab';
-    align-items: center;
-    padding: .1em 0;
-    // justify-content: center;
 }
 
 .history-field > span {
@@ -299,14 +320,14 @@ li.skill {
 .history-time {
     // font-size: .9em;
     // margin-left: 0;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    // margin-top: .5em;
+    // margin-bottom: .3em;
     font-weight: 700;
-    color: hsla(39, 70%, 35%);
+    color: hsla(39, 20%, 35%, 100%);
 }
 
-.history-time > span {
-    color: hsla(39, 20%, 55%, 100%);
+.history-time.present {
+    color: hsla(39, 70%, 35%);
 }
 
 .degree, .position, .place {
@@ -328,7 +349,8 @@ li.skill {
 
 ul.desc {
     list-style: square;
-    margin-left: 2em;
+    margin-left: 1.3em;
+    padding-right: 1em;
 }
 
 li.desc-item {
@@ -412,15 +434,6 @@ li.project > div {
     font-size: inherit;
 }
 
-span.tag {
-    font-family: "Roboto Slab";
-    font-size: .9em;
-    border-radius: 3px;
-    padding: .1em .5em;
-    margin: 0 .1em 0 0;
-    text-align: center;
-}
-
 .tooltip {
     position: absolute;
     background-color: hsl(39, 40%, 33%);
@@ -441,14 +454,4 @@ span.tag {
 li.skill:hover > .tooltip, span.tag:hover > .tooltip {
     top: initial;
     opacity: 1;
-}
-
-li.skill, span.tag {
-    background-color: white;
-    border: 1px solid hsl(39, 50%, 25%);
-    color: hsl(39, 50%, 25%);
-    font-weight: 500;
-    display: inline-block;
-    margin-top: auto;
-    // transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }

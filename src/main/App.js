@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { useMediaQuery } from './components/Hooks';
+// import Timeline from './components/Timeline';
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
@@ -16,6 +17,7 @@ function App() {
           <Skills/>
         </div>
         <div className="column right">
+          {/* <Timeline/> */}
           <Experience/>
           <Projects/>
         </div>

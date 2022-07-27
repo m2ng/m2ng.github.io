@@ -1,6 +1,6 @@
 [
     {
-        "time": "Jun 2022 — Present",
+        "time": "06/2022 — Present",
         "effective": true,
         "place": "HSBC Global Services (Hong Kong) Limited",
         "url": "https://www.hsbc.com.hk/",
@@ -13,7 +13,7 @@
         ]
     },
     {
-        "time": "July 2021 — Jun 2022",
+        "time": "07/2021 — 06/2022",
         "effective": false,
         "place": "LORA Technologies",
         "url": "https://www.asklora.ai/",
@@ -26,7 +26,7 @@
         ]
     },
     {
-        "time": "Oct 2021 — Jun 2022",
+        "time": "10/2021 — 06/2022",
         "effective": false,
         "place": "The Chinese University of Hong Kong",
         "url": "https://www.sta.cuhk.edu.hk/",
@@ -35,9 +35,10 @@
         "details": []
     },
     {
-        "time": "Jul 2019 — Jun 2021",
+        "time": "07/2019 — 06/2021",
         "effective": false,
         "place": "The Chinese University of Hong Kong",
+        "url": "https://www.sta.cuhk.edu.hk/",
         "title": "MPhil in Statistics (CGPA: 3.910 / 4.000)",
         "nature": "degree",
         "details": [
@@ -45,7 +46,7 @@
         ]
     },
     {
-        "time": "Jun 2018 — Jul 2019",
+        "time": "06/2018 — 07/2019",
         "effective": false,
         "place": "Hong Kong Telecom",
         "url": "https://www.hkt.com/",
@@ -58,9 +59,10 @@
         ]
     },
     {
-        "time": "Sep 2014 — Jul 2018",
+        "time": "09/2014 — 07/2018",
         "effective": false,
         "place": "The Chinese University of Hong Kong",
+        "url": "https://www.sta.cuhk.edu.hk/",
         "title": "BSc in Statistics (CGPA: 3.363 / 4.000)",
         "nature": "degree",
         "details": [
@@ -68,7 +70,7 @@
         ]
     },
     {
-        "time": "Jun 2017 — Aug 2017",
+        "time": "06/2017 — 08/2017",
         "effective": false,
         "place": "Census & Statistics Department",
         "url": "https://www.censtatd.gov.hk/",
@@ -77,7 +79,7 @@
         "details": []
     },
     {
-        "time": "Jun 2016 — Aug 2016",
+        "time": "06/2016 — 08/2016",
         "effective": false,
         "place": "Wharf T&T Limited",
         "title": "Product Intern",

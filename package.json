@@ -28,6 +28,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages --dist 'build' --branch 'gh-pages'"
   },
+  "homepage": "https://m2ng.github.io",
   "eslintConfig": {
     "extends": [
       "react-app",
