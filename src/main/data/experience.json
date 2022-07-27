@@ -5,7 +5,12 @@
         "place": "HSBC Global Services (Hong Kong) Limited",
         "url": "https://www.hsbc.com.hk/",
         "title": "Data Scientist",
-        "nature": "job"
+        "nature": "job",
+        "details": [
+            "Develop data-driven alerts built upon high volume of bank data for managing credit risk",
+            "Collaborate with global stakeholders to enhance the quality of the alerts",
+            "Propose new workflows and best practices for building data-driven solutions"
+        ]
     },
     {
         "time": "July 2021 — Jun 2022",

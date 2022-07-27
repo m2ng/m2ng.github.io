@@ -4,6 +4,7 @@ import projects from '../data/projects.json';
 
 export default function Projects() {
   return (
+    !!projects.length && (
     <div className="projects">
       <div className="header">Projects</div>
       <div className="project-container">
@@ -22,5 +23,5 @@ export default function Projects() {
           })}
       </div>
     </div>
-  );
+  ))
 }
