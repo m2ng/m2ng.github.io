@@ -15,7 +15,12 @@ export const rowParse = (row, section) => {
       if (x.startsWith("#")) {
         const [tagName, tooltip] = parseTag(x, section);
         if (!!tooltip) {
-          return [<span className="tag" key={`tag-${i}`}><span>{tagName}</span><span className='tooltip'>{tooltip}</span></span>, " "]
+          return [
+            <span className="tag" key={`tag-${i}`}><span>{tagName}</span>
+              <div className="tooltip disable-select">{tooltip}</div>
+            </span>,
+            " "
+          ]
         } else {
           return [<span className="tag" key={`tag-${i}`}><span>{tagName}</span></span>, " "]
         }

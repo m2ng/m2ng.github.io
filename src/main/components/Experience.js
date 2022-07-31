@@ -8,26 +8,34 @@ function HistoryContainer({historyNature}) {
       {
         experience
         .filter(({nature}) => nature === historyNature)
-        .map(({time, effective, title, place, url, details}, i) => (
+        .map(({time, effective, title, nature, place, url, details, education_details}, i) => (
           <div className={"history" + (effective ? " present" : "")} key={`exp-${i}`}>
             <div className="history-header names">
-              <span className="position">{title}&nbsp;</span>
-              <span className="place">{"@"}&nbsp;{
-                (!!url && url.length > 0 ) ? <a href={url}>{place}</a> : place
+              {
+                (nature === 'job')
+                ? (<span className="position">{title}&nbsp;</span>)
+                : (<span className="education-level">
+                    <span className="level">{education_details.type}</span>
+                    {" in "}
+                    <span className="major">{education_details.major}&nbsp;</span>
+                    <span className="grade">{`(${education_details.grade.type}: ${education_details.grade.score} / ${education_details.grade.max_score})`}</span>
+                    &nbsp;
+                  </span>)
+              }
+              <span className="place-group"><span className="at">at</span>&nbsp;{
+                (!!url && url.length > 0 ) ? <a className="place" href={url}>{place}</a> : place
               }</span>
             </div>
             <div className={"history-header history-time" + (effective ? " present" : "")}>{time}</div>
             <div className={"full-row history-content" + (effective ? " present" : "")}>
-                  <>
-                  { (!!details && details.length > 0) && (
-                    <ul className="history-field desc">
-                        {details.map((row, j) => {
-                          const [ parsedRow, highlight ] = rowParse(row, "experience");
-                          return <li className={"desc-item" + (highlight ? " highlight" : "")} key={`exp-${i}-${j}`}><div>{parsedRow}</div></li>
-                        })}
-                    </ul>)
-                  }
-                  </>
+              { (!!details && details.length > 0) && (
+                <ul className="history-field desc">
+                    {details.map((row, j) => {
+                      const [ parsedRow, highlight ] = rowParse(row, "experience");
+                      return <li className={"desc-item" + (highlight ? " highlight" : "")} key={`exp-${i}-${j}`}><div>{parsedRow}</div></li>
+                    })}
+                </ul>)
+              }
             </div>
           </div>
         ))

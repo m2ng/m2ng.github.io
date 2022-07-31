@@ -40,6 +40,15 @@
         "place": "The Chinese University of Hong Kong",
         "url": "https://www.sta.cuhk.edu.hk/",
         "title": "MPhil in Statistics (CGPA: 3.910 / 4.000)",
+        "education_details": {
+            "type": "MPhil",
+            "major": "Statistics",
+            "grade": {
+                "type": "CGPA",
+                "score": "3.910",
+                "max_score": "4.000"
+            }
+        },
         "nature": "degree",
         "details": [
             "Develop a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
@@ -65,6 +74,15 @@
         "url": "https://www.sta.cuhk.edu.hk/",
         "title": "BSc in Statistics (CGPA: 3.363 / 4.000)",
         "nature": "degree",
+        "education_details": {
+            "type": "BSc",
+            "major": "Statistics",
+            "grade": {
+                "type": "CGPA",
+                "score": "3.363",
+                "max_score": "4.000"
+            }
+        },
         "details": [
             "Department of Statistics Scholarship 2015/16, 2017/18; Academic Merit in 07/2017; Advantage Trust Statistics Scholarship 2015/2016"
         ]

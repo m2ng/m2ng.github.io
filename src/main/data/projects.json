@@ -11,7 +11,7 @@
     {
         "group": "Data engineering",
         "details": [
-            "Mobile analytics driven by Alibaba LogHub (more cost-effective alternative to Apache Kafka)",
+            "Mobile analytics driven by Alibaba LogHub (more cost-effective alternative to self-hosted Apache Kafka)",
             "Data integration pipeline for logs",
             "Stream web analytics data to MongoDB"
         ]
