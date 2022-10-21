@@ -106,7 +106,7 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.2)
     nio4r (2.5.8)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -169,11 +169,11 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
   bundler
-  jekyll (= 4.2.2)
   kramdown
   minima!
   rogue
