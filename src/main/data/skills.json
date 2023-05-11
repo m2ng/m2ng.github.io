@@ -2,6 +2,8 @@
     {
         "group": "Data-related",
         "skills": [
+            "#Databricks",
+            "#Azure_Data_Factory",
             "#TensorFlow",
             "#PyTorch",
             "#LightGBM",

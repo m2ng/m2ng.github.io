@@ -7,7 +7,7 @@ function HistoryContainer({historyNature}) {
     <div className="history-container">
       {
         experience
-        .filter(({nature}) => nature === historyNature)
+        .filter(({visible, nature}) => (visible && nature === historyNature))
         .map(({time, effective, title, nature, place, url, details, education_details}, i) => (
           <div className={"history" + (effective ? " present" : "")} key={`exp-${i}`}>
             <div className="history-header names">

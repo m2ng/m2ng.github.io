@@ -144,6 +144,24 @@ a {
     // align-self: flex-start;
 }
 
+.contact-method > .default {
+    display: inline;
+}
+
+.contact-method > .only-in-print {
+    display: none;
+}
+
+@media only print {
+    .contact-method > .default {
+        display: none;
+    }
+
+    .contact-method > .only-in-print {
+        display: inline;
+    }
+}
+
 @media only screen and (min-width: calc($mobile-max-width + 1px)){
     .footer {
         padding-bottom: 0;

@@ -1,7 +1,22 @@
 [
     {
-        "time": "06/2022 — Present",
+        "time": "12/2023 — Present",
         "effective": true,
+        "place": "Swire Properties Limited",
+        "url": "https://www.swireproperties.com/",
+        "title": "Data Engineer",
+        "nature": "job",
+        "details": [
+            "Initiate and provide #beginner-friendly_workshops for business users",
+            "Design and develop data pipelines on #Azure to generate data assets consumable by business users",
+            "Design and enable low-cost #self-service_data_analytics",
+            "Manage and monitor cloud data architecture"
+        ],
+        "visible": true
+    },
+    {
+        "time": "06/2022 — 12/2023",
+        "effective": false,
         "place": "HSBC Global Services (Hong Kong) Limited",
         "url": "https://www.hsbc.com.hk/",
         "title": "Data Scientist",
@@ -10,7 +25,8 @@
             "Develop data-driven alerts built upon high volume of bank data for managing credit risk",
             "Collaborate with global stakeholders to enhance the quality of the alerts",
             "Propose new workflows and best practices for building data-driven solutions"
-        ]
+        ],
+        "visible": true
     },
     {
         "time": "07/2021 — 06/2022",
@@ -23,7 +39,8 @@
             "Lead a mobile app analytics project and establish the data architecture and data pipeline",
             "Build and deploy a full-stack containerized application to enable job submission to a task queue",
             "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"
-        ]
+        ],
+        "visible": true
     },
     {
         "time": "10/2021 — 06/2022",
@@ -32,7 +49,8 @@
         "url": "https://www.sta.cuhk.edu.hk/",
         "title": "Part-time Research Assistant",
         "nature": "job",
-        "details": []
+        "details": [],
+        "visible": true
     },
     {
         "time": "07/2019 — 06/2021",
@@ -52,7 +70,8 @@
         "nature": "degree",
         "details": [
             "Develop a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
-        ]
+        ],
+        "visible": true
     },
     {
         "time": "06/2018 — 07/2019",
@@ -65,7 +84,8 @@
             "Design and develop the #recommender_system for an e-commerce platform",
             "Enable streaming of web analytics data to a #MongoDB database",
             "User behavior analysis driven by #Apache_Spark"
-        ]
+        ],
+        "visible": true
     },
     {
         "time": "09/2014 — 07/2018",
@@ -85,7 +105,8 @@
         },
         "details": [
             "Department of Statistics Scholarship 2015/16, 2017/18; Academic Merit in 07/2017; Advantage Trust Statistics Scholarship 2015/2016"
-        ]
+        ],
+        "visible": true
     },
     {
         "time": "06/2017 — 08/2017",
@@ -94,7 +115,8 @@
         "url": "https://www.censtatd.gov.hk/",
         "title": "Summer Intern",
         "nature": "job",
-        "details": []
+        "details": [],
+        "visible": false
     },
     {
         "time": "06/2016 — 08/2016",
@@ -102,6 +124,7 @@
         "place": "Wharf T&T Limited",
         "title": "Product Intern",
         "nature": "job",
-        "details": []
+        "details": [],
+        "visible": false
     }
 ]

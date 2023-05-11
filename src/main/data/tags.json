@@ -3,12 +3,24 @@
         "section": "experience",
         "tags": [
             {
+                "name": "Azure",
+                "tooltip": "I used, but not limited to, Azure Data Factory and Azure Databricks for data ETL."
+            },
+            {
                 "name": "Kubernetes",
                 "tooltip": "I hosted multiple apps in a Kubernetes cluster in such a way that high availability can be achieved."
             },
             {
                 "name": "recommender system",
                 "tooltip": "I am responsible for extending an existing model, diagnosing training issues, merging outputs to a data pipeline."
+            },
+            {
+                "name": "self-service data analytics",
+                "tooltip": "Conduct data analysis/create dashboard without relying on IT for support."
+            },
+            {
+                "name": "beginner-friendly workshops",
+                "tooltip": "I use analogies which business users should be familiar with to help them understand what self-service analytics is."
             }
         ]
     }
