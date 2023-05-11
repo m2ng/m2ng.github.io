@@ -2,9 +2,13 @@
 
 IMAGE_NAME=m2ng-github-io-jekyll-base
 
+build_image () {
+  docker build -t $IMAGE_NAME -f Dockerfile.jekyll .
+}
+
 make () {
   export site_name="m2ng"
-  docker build -t $IMAGE_NAME -f Dockerfile.jekyll .
+  build_image
   docker run --rm \
     -v "$PWD/src/jekyll:/srv/jekyll" \
     -it $IMAGE_NAME \
@@ -13,7 +17,7 @@ make () {
 
 dev () {
   export site_name="m2ng"
-  docker build -t $IMAGE_NAME -f Dockerfile.jekyll .
+  build_image
   docker run --rm \
     -p 4000:4000 \
     --name m2ng-github-io-blog-dev \
@@ -24,7 +28,7 @@ dev () {
 
 build () {
   export site_name="m2ng"
-  docker build -t $IMAGE_NAME -f Dockerfile.jekyll .
+  build_image
   mkdir -p $PWD/build/blog
   docker run --rm \
     -v "$PWD/build/blog:/tmp/build" \
