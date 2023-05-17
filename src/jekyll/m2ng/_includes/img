@@ -1,0 +1,33 @@
+<div class="picture">
+    {%- if include.caption -%}
+    <figure>
+    {%- endif -%}
+        <picture>
+        <!-- Large screens -->
+        <source
+            media="(min-width: 415px)"
+            srcset="{{include.src}}-lg.{{include.ext}}">
+        <!-- Small screens -->
+        <source
+            media="(max-width: 414px)"
+            srcset="{{include.src}}-sm.{{include.ext}}">
+        <!-- Fallback -->
+
+        {%- if include.caption -%}
+        <img
+            src="{{include.src}}-lg.{{include.ext}}"
+            alt="{{ include.alt }}"
+            class="img-fluid figure-img"
+            />
+        {%- else -%}
+        <img
+            src="{{include.src}}-lg.{{include.ext}}"
+            alt="{{ include.alt }}"
+            />
+        {%- endif -%}
+        </picture>
+        {%- if include.caption -%}
+        <figcaption>{{ include.caption }}</figcaption>
+    </figure>
+    {%- endif -%}
+</div>

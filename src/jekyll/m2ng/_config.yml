@@ -24,7 +24,7 @@ author:
   name: Matthew Ng
   email: ngmhmatthew@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, I am Matthew. I will talk about data science, computer tricks, and anything I find interesting here.
+  Hi, I am Matthew. I talk about data science, computer tricks, and anything I find interesting here.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://m2ng.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
