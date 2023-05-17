@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { rowParse } from '../utils';
 import projects from '../data/projects.json';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { parseTag } from '../utils';
 import skills from '../data/skills.json';
 
