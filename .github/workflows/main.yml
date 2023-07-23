@@ -42,7 +42,8 @@ jobs:
         mkdir -p $BUILD_PATH
         cd apps/main
         npm install
-        npm run build
+        BUILD_PATH=$BUILD_PATH npm run build
+        ls
         ls $BUILD_PATH
     - name: Upload built CV
       uses: actions/upload-artifact@v3
