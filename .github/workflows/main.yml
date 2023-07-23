@@ -39,14 +39,23 @@ jobs:
     - name: Build CV
       run: |
         BUILD_PATH="$PWD/build"
+        echo $PWD/build
         mkdir -p $BUILD_PATH
+        echo "Print $BUILD_PATH"
+        ls $BUILD_PATH
         cd apps/main
         npm install
         BUILD_PATH=$BUILD_PATH npm run build
+        echo "ls current directory"
         ls
+        echo "ls ../../"
+        ls ../../
+        echo "ls ../../build"
+        ls ../../build
+        echo "ls $BUILD_PATH"
         ls $BUILD_PATH
     - name: Upload built CV
       uses: actions/upload-artifact@v3
       with:
         name: main-app
-        path: $BUILD_PATH
+        path: ../../build
