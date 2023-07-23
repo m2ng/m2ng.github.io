@@ -10,7 +10,7 @@ make () {
   export site_name="m2ng"
   build_image
   docker run --rm \
-    -v "$PWD/src/jekyll:/srv/jekyll" \
+    -v "$PWD/apps/jekyll:/srv/jekyll" \
     -it $IMAGE_NAME \
     sh -c "chown -R jekyll /usr/gem/ && jekyll new $site_name/"
 }
@@ -21,7 +21,7 @@ dev () {
   docker run --rm \
     -p 4000:4000 \
     --name m2ng-github-io-blog-dev \
-    -v "$PWD/src/jekyll:/srv/jekyll" \
+    -v "$PWD/apps/jekyll:/srv/jekyll" \
     -it $IMAGE_NAME \
     sh -c "cd $site_name && bundle exec jekyll serve --host=0.0.0.0 -b ''"
 }
@@ -32,7 +32,7 @@ build () {
   mkdir -p $PWD/build/blog
   docker run --rm \
     -v "$PWD/build/blog:/tmp/build" \
-    -v "$PWD/src/jekyll:/srv/jekyll" \
+    -v "$PWD/apps/jekyll:/srv/jekyll" \
     -it $IMAGE_NAME \
     sh -c "chown -R jekyll /usr/gem/ && mkdir -p /tmp/build && chown -R jekyll /tmp/build && cd $site_name && bundle exec jekyll build -d /tmp/build && rm -rf .jekyll-cache"
 }

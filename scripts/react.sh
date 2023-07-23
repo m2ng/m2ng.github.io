@@ -10,7 +10,7 @@ dev () {
   docker run \
     --name m2ng-github-io-dev \
     --rm \
-    -v "$PWD/src/main:/app/src:ro" \
+    -v "$PWD/apps/main:/app/src:ro" \
     -v "$PWD/public:/app/public:ro" \
     -p 3000:3000 \
     $IMAGE_NAME
@@ -23,7 +23,7 @@ build () {
     --entrypoint /bin/sh \
     -v "$PWD/build:/app/build" \
     -v "$PWD/public:/app/public" \
-    -v "$PWD/src/main:/app/src" \
+    -v "$PWD/apps/main:/app/src" \
     $IMAGE_NAME \
     -c "npm run build"
 }

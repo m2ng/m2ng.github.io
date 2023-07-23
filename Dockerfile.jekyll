@@ -1,5 +1,5 @@
 FROM jekyll/jekyll
-COPY src/jekyll/m2ng/Gemfile .
-COPY src/jekyll/m2ng/minima.gemspec .
+COPY apps/jekyll/m2ng/Gemfile .
+COPY apps/jekyll/m2ng/minima.gemspec .
 ENV TZ="Asia/Hong_Kong"
 RUN bundle install

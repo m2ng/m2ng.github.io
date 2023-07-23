@@ -13,7 +13,7 @@ This is a new version of my résumé. The homepage is created using React while 
 ## Make responsive images
 ```
 docker build -t m2ng-github-io-responsive-images:latest src/responsive-images
-docker run --rm -v "$PWD/src/jekyll/m2ng/_assets/img:/app/img:ro" -v "$PWD/src/jekyll/m2ng/assets/img:/app/dist:rw" m2ng-github-io-responsive-images:latest
+docker run --rm -v "$PWD/apps/jekyll/m2ng/_assets/img:/app/img:ro" -v "$PWD/apps/jekyll/m2ng/assets/img:/app/dist:rw" m2ng-github-io-responsive-images:latest
 ```
 
 ## Take screenshot
