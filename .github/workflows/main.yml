@@ -40,7 +40,7 @@ jobs:
       run: |
         BUILD_PATH="$PWD/build"
         mkdir -p $BUILD_PATH
-        cd src/main
+        cd apps/main
         npm install
         npm run build
         ls $BUILD_PATH
