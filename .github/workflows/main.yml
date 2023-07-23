@@ -78,10 +78,10 @@ jobs:
         BUILD_DIR=${{ github.workspace }}/build
         echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
         mkdir -p $BUILD_DIR
-    - name: Get current release
-      uses: actions/checkout@v3
-      with:
-        path: ${{ env.CURRENT_DIR }}
+    # - name: Get current release
+    #   uses: actions/checkout@v3
+    #   with:
+    #     path: ${{ env.CURRENT_DIR }}
     - name: "Download all artifacts"
       uses: actions/download-artifact@v3
       with:
@@ -95,18 +95,19 @@ jobs:
         rm -rf main-app
         rm -rf blog-app
         cd $BUILD_DIR && ls -R
-    # - run: |
-    # - name: Deploy
-    #   run: |
-    #     git init
-    #     git config --local user.name ${{ env.USER_NAME }}
-    #     git config --local user.email ${{ env.USER_EMAIL }}
-    #     git status
-    #     git remote add origin git@github.com:m2ng/m2ng.github.io.git
-    #     git checkout -b gh-pages-test
-    #     git add --all
-    #     git commit -m "Deploy"
-    #     git push origin gh-pages-test -f
-    #     echo "Success"
+    - name: Deploy
+      run: |
+        cd ${{ env.CURRENT_DIR }}
+        git init
+        git config --local user.name ${{ env.USER_NAME }}
+        git config --local user.email ${{ env.USER_EMAIL }}
+        git status
+        git remote add origin git@github.com:m2ng/m2ng.github.io.git
+        git checkout -b gh-pages-test
+        cp -r ${{ env.BUILD_DIR }} .
+        git add --all
+        git commit -m "Deploy"
+        git push origin gh-pages-test -f
+        echo "Success"
 
       
