@@ -46,7 +46,7 @@ function HistoryContainer({historyNature}) {
 
 export default function Experience() {
   return (
-    <div className="experience">
+    <div className="experience right">
       <div className="subcontainer">
         <div className="header">Working experience</div>
         <HistoryContainer historyNature="job"/>

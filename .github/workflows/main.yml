@@ -6,21 +6,6 @@ on:
     - master
 
 jobs:
-  # test1:
-  #   runs-on: ubuntu-latest
-  #   env:
-  #     CI_PRI      : ${{secrets.CI_PRI}}
-  #   steps:
-  #   - run: |
-  #       mkdir -p $HOME/.ssh
-  #       echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
-  #       echo -n ${{ env.CI_PRI }} | base64 -d > $HOME/.ssh/id_ci_pri
-  #       chmod 400 ~/.ssh/id_ci_pri
-  #       echo -e "Host github.com\n\
-  #         Hostname github.com\n\
-  #         IdentityFile=$HOME/.ssh/id_ci_pri\n" > ~/.ssh/config
-  #       cat ~/.ssh/config
-  #       ssh -T git@github.com
   build-cv:
     name: Build CV
     runs-on: ubuntu-latest
@@ -122,9 +107,9 @@ jobs:
         git config --local user.email ${{ env.USER_EMAIL }}
         git status
         git remote add origin git@github.com:m2ng/m2ng.github.io.git
-        git checkout -b gh-pages-test
+        git checkout -b gh-pages
         cp -r ${{ env.BUILD_DIR }}/* .
         git add --all
         git commit -m "Deploy"
-        git push origin gh-pages-test -f
+        git push origin gh-pages -f
         echo "Success"

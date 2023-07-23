@@ -36,6 +36,7 @@
         "title": "Data Scientist",
         "nature": "job",
         "details": [
+            "Incorporate investment research insights for enhancing existing investment strategies",
             "Lead a mobile app analytics project and establish the data architecture and data pipeline",
             "Build and deploy a full-stack containerized application to enable job submission to a task queue",
             "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"

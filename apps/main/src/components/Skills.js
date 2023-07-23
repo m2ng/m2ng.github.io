@@ -4,7 +4,7 @@ import skills from '../data/skills.json';
 
 export default function Skills() {
   return (
-    <div className="skills subcontainer">
+    <div className="skills left subcontainer">
       <div className="header">Skills</div>
       {
           skills.map(({ group, skills }, i) => (
