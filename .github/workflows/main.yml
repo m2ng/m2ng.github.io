@@ -44,3 +44,8 @@ jobs:
         npm install
         npm run build
         ls $BUILD_PATH
+    - name: Upload built CV
+      uses: actions/upload-artifact@v3
+      with:
+        name: main-app
+        path: $BUILD_PATH
