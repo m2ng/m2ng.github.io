@@ -123,7 +123,7 @@ jobs:
         git status
         git remote add origin git@github.com:m2ng/m2ng.github.io.git
         git checkout -b gh-pages-test
-        cp -r ${{ env.BUILD_DIR }} .
+        cp -r ${{ env.BUILD_DIR }}/* .
         git add --all
         git commit -m "Deploy"
         git push origin gh-pages-test -f
