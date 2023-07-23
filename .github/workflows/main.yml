@@ -16,11 +16,10 @@ jobs:
         echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
         echo -n ${{ env.CI_PRI }} | base64 -d > $HOME/.ssh/id_ci_pri
         chmod 400 ~/.ssh/id_ci_pri
-        cat $HOME/.ssh/id_ci_pri
         echo -e "Host github.com\n\
           Hostname github.com\n\
-          IdentityFile=$HOME/.ssh/id_ci_pri\n" > ~/.ssh/ssh_config
-        cat ~/.ssh/ssh_config
+          IdentityFile=$HOME/.ssh/id_ci_pri\n" > ~/.ssh/config
+        cat ~/.ssh/config
         ssh -T git@github.com
   # build-cv:
   #   name: Build CV
