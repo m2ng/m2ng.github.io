@@ -62,6 +62,8 @@ jobs:
       CI_PRI      : ${{secrets.CI_PRI}}
       USER_NAME   : Matthew Ng
       USER_EMAIL  : ngmhmatthew@gmail.com
+    environment:
+      name: github-pages
     steps:
     - name: Initialize SSH config
       run: |
