@@ -57,8 +57,8 @@ jobs:
     - name: Build Blog
       run: |
         docker run \
-        -v ${{ github.workspace }}/apps/jekyll:/srv/jekyll \
-        -v ${{ github.workspace }}/apps/jekyll/_site:/srv/jekyll/_site \
+        -v ${{ github.workspace }}/apps/jekyll/m2ng:/srv/jekyll \
+        -v ${{ github.workspace }}/apps/jekyll/m2ng/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "ls /srv/jekyll && bundle install && chmod -R 777 /srv/jekyll && jekyll build --future"
     - name: List built blog
       run: |
