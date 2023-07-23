@@ -26,17 +26,16 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
-        cat ~/.ssh/known_hosts
         echo -n $CI_PRI | base64 -d > ~/.ssh/id_ci_pri
         chmod 400 ~/.ssh/id_ci_pri
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ci_pri
         git remote set-url origin git@github.com:m2ng/m2ng.github.io.git
-        ssh -T git@github.com
-    # - name: Use Node.js ${{ matrix.node-version }}
-    #   uses: actions/setup-node@v1
-    #   with:
-    #     node-version: ${{ matrix.node-version }}
-    # - name: npm install
-    #   run: |
-    #     npm install
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install
+      run: |
+        npm install
+    
