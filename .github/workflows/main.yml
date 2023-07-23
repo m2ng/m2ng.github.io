@@ -8,6 +8,8 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    env:
+      CI_PRI      : ${{secrets.CI_PRI}}
     steps:
     - run: |
         mkdir -p $HOME/.ssh
