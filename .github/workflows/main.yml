@@ -39,8 +39,10 @@ jobs:
     - name: Test 3
       run: |
         BUILD_PATH="$PWD/build"
+        echo "BUILD_PATH=$BUILD_PATH" >> $GITHUB_ENV
         mkdir -p $BUILD_PATH
         echo "abc" > $BUILD_PATH/abc.txt
+        echo "def" > $BUILD_PATH/def.txt
     # - name: Build CV
     #   run: |
     #     BUILD_PATH="$PWD/build"
