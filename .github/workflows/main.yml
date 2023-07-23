@@ -33,6 +33,7 @@ jobs:
         name: main-app
         path: ${{ env.BUILD_PATH }}
   build-blog:
+    name: Build blog
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -68,8 +69,6 @@ jobs:
         echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
         echo -n $CI_PRI | base64 -d > ~/.ssh/id_ci_pri
         chmod 400 ~/.ssh/id_ci_pri
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_ci_pri
     - name: Initialize folders
       run: |
         CURRENT_DIR=${{ github.workspace }}/current
@@ -97,6 +96,8 @@ jobs:
         cd $BUILD_DIR && ls -R
     - name: Deploy
       run: |
+        eval "$(ssh-agent -s)"
+        ssh-add ~/.ssh/id_ci_pri
         cd ${{ env.CURRENT_DIR }}
         git init
         git config --local user.name ${{ env.USER_NAME }}
