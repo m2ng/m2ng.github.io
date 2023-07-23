@@ -32,27 +32,19 @@ jobs:
     #     eval "$(ssh-agent -s)"
     #     ssh-add ~/.ssh/id_ci_pri
     #     git remote set-url origin git@github.com:m2ng/m2ng.github.io.git
-    # - name: Use Node.js ${{ matrix.node-version }}
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: ${{ matrix.node-version }}
-    - name: Test 3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Build CV
       run: |
         BUILD_PATH="$PWD/build"
         echo "BUILD_PATH=$BUILD_PATH" >> $GITHUB_ENV
         mkdir -p $BUILD_PATH
-        echo "abc" > $BUILD_PATH/abc.txt
-        echo "def" > $BUILD_PATH/def.txt
-    # - name: Build CV
-    #   run: |
-    #     BUILD_PATH="$PWD/build"
-    #     mkdir -p $BUILD_PATH
-    #     echo "Print $BUILD_PATH"
-    #     ls $BUILD_PATH
-    #     cd apps/main
-    #     npm install
-    #     BUILD_PATH=$BUILD_PATH npm run build
-    #     echo $PWD/build
+        cd apps/main
+        npm install
+        BUILD_PATH=$BUILD_PATH npm run build
+        echo $PWD/build
     - name: Upload built CV
       uses: actions/upload-artifact@v3
       with:
