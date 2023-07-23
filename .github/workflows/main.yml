@@ -14,19 +14,6 @@ jobs:
         node-version: [16.x]
     steps:
     - uses: actions/checkout@v3
-    # - name: Test 1
-    #   run: |
-    #     ls
-    #     echo $PWD
-  #   # - name: Test 2
-  #   #   run: |
-  #   #     mkdir -p ~/.ssh
-  #   #     echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
-  #   #     echo -n $CI_PRI | base64 -d > ~/.ssh/id_ci_pri
-  #   #     chmod 400 ~/.ssh/id_ci_pri
-  #   #     eval "$(ssh-agent -s)"
-  #   #     ssh-add ~/.ssh/id_ci_pri
-  #   #     git remote set-url origin git@github.com:m2ng/m2ng.github.io.git
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -83,18 +70,32 @@ jobs:
         chmod 400 ~/.ssh/id_ci_pri
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ci_pri
-    - name: Initialize build folder
+    - name: Initialize folders
       run: |
+        CURRENT_DIR=${{ github.workspace }}/current
+        echo "CURRENT_DIR=$CURRENT_DIR" >> $GITHUB_ENV
+        mkdir -p $CURRENT_DIR
         BUILD_DIR=${{ github.workspace }}/build
         echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
         mkdir -p $BUILD_DIR
-        cd $BUILD_DIR
+    - name: Get current release
+      uses: actions/checkout@v3
+      with:
+        path: ${{ env.CURRENT_DIR }}
     - name: "Download all artifacts"
       uses: actions/download-artifact@v3
       with:
         path: .
-    - run: |
-        ls -R
+    - name: Pack and cleanup
+      run: |
+        BUILD_DIR=${{ env.BUILD_DIR }}
+        cp -r main-app/* $BUILD_DIR/
+        mkdir $BUILD_DIR/blog
+        cp -r blog-app/* $BUILD_DIR/blog/
+        rm -rf main-app
+        rm -rf blog-app
+        cd $BUILD_DIR && ls -R
+    # - run: |
     # - name: Deploy
     #   run: |
     #     git init
