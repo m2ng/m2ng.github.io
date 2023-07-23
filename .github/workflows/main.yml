@@ -56,12 +56,19 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build Blog
       run: |
+        echo "JEKYLL_ROOT=${{ github.workspace }}/apps/jekyll/m2ng" >> $GITHUB_ENV
         docker run \
-        -v ${{ github.workspace }}/apps/jekyll/m2ng:/srv/jekyll \
-        -v ${{ github.workspace }}/apps/jekyll/m2ng/_site:/srv/jekyll/_site \
+        -v $JEKYLL_ROOT:/srv/jekyll \
+        -v $JEKYLL_ROOT/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "ls /srv/jekyll && bundle install && chmod -R 777 /srv/jekyll && jekyll build --future"
     - name: List built blog
       run: |
-        ls
+        ls $JEKYLL_ROOT
         echo; echo;
-        ls ${{ github.workspace }}/apps/jekyll
+        ls $JEKYLL_ROOT/_site
+    - name: Upload built blog
+      uses: actions/upload-artifact@v3
+      with:
+        name: blog-app
+        path: ${{ env.JEKYLL_ROOT }}/_site
+      
