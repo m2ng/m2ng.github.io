@@ -65,10 +65,13 @@ jobs:
     steps:
     - name: Initialize SSH config
       run: |
-        mkdir -p ~/.ssh
+        mkdir -p $HOME/.ssh
         echo "github.com ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU" >> ~/.ssh/known_hosts
-        echo -n $CI_PRI | base64 -d > ~/.ssh/id_ci_pri
+        echo -n $CI_PRI | base64 -d > $HOME/.ssh/id_ci_pri
         chmod 400 ~/.ssh/id_ci_pri
+        echo -e "Host github.com\n\
+          Hostname github.com\n\
+          IdentityFile=$HOME/.ssh/id_ci_pri\n" > ~/.ssh/ssh_config
     - name: Initialize folders
       run: |
         CURRENT_DIR=${{ github.workspace }}/current
@@ -96,8 +99,8 @@ jobs:
         cd $BUILD_DIR && ls -R
     - name: Deploy
       run: |
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_ci_pri
+        # eval "$(ssh-agent -s)"
+        # ssh-add ~/.ssh/id_ci_pri
         cd ${{ env.CURRENT_DIR }}
         git init
         git config --local user.name ${{ env.USER_NAME }}
