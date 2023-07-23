@@ -4,7 +4,7 @@ title: "The first workshop I gave in my life🎉"
 categories: work
 ---
 
-{% include img src="/assets/img/first_workshop" ext="jpg" caption="Professional shot by Connie Yu" %}
+{% include img.html src="/assets/img/first_workshop" ext="jpg" caption="Professional shot by Connie Yu" %}
 
 This is the first technical workshop I have ever initiated and conducted for laymen in my life.
 
