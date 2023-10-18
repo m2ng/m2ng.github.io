@@ -3,15 +3,15 @@
 IMAGE_NAME=m2ng-github-io-dev
 
 build_image () {
-  docker build -t $IMAGE_NAME -f Dockerfile.react .
+  docker build -t $IMAGE_NAME -f apps/main/Dockerfile apps/main
 }
 
 dev () {
   docker run \
     --name m2ng-github-io-dev \
     --rm \
-    -v "$PWD/apps/main:/app/src:ro" \
-    -v "$PWD/public:/app/public:ro" \
+    -v "$PWD/apps/main/src:/app/src:ro" \
+    -v "$PWD/apps/main/public:/app/public:ro" \
     -p 3000:3000 \
     $IMAGE_NAME
 }
