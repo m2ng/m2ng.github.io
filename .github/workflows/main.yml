@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-cv:
+    if: "!contains(github.event.head_commit.message, 'no-ci')"
     name: Build CV
     runs-on: ubuntu-latest
     strategy:
@@ -33,6 +34,7 @@ jobs:
         name: main-app
         path: ${{ env.BUILD_PATH }}
   build-blog:
+    if: "!contains(github.event.head_commit.message, 'no-ci')"
     name: Build blog
     runs-on: ubuntu-latest
     steps:
@@ -56,6 +58,7 @@ jobs:
         name: blog-app
         path: ${{ env.JEKYLL_ROOT }}/_site
   build:
+    if: "!contains(github.event.head_commit.message, 'no-ci')"
     runs-on: ubuntu-latest
     needs: [ build-cv, build-blog ]
     env:
