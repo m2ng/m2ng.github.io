@@ -21,9 +21,9 @@ build () {
   docker run \
     --rm \
     --entrypoint /bin/sh \
+    -v "$PWD/apps/main/src:/app/src:ro" \
+    -v "$PWD/apps/main/public:/app/public:ro" \
     -v "$PWD/build:/app/build" \
-    -v "$PWD/public:/app/public" \
-    -v "$PWD/apps/main:/app/src" \
     $IMAGE_NAME \
     -c "npm run build"
 }
