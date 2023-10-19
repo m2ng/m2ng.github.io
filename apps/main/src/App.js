@@ -2,7 +2,7 @@ import './App.scss';
 import Me from './components/Me';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
+// import Projects from './components/Projects';
 import Footer from './components/Footer';
 // import { useMediaQuery } from './components/Hooks';
 // import Timeline from './components/Timeline';
