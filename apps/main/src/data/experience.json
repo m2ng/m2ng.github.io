@@ -8,9 +8,9 @@
         "nature": "job",
         "details": [
             "Initiate and provide #beginner-friendly_workshops for business users",
-            "Design and develop data pipelines on #Azure to generate data assets consumable by business users",
-            "Design and enable low-cost #self-service_data_analytics",
-            "Manage and monitor cloud data architecture"
+            "Design and develop data pipelines on #Azure to generate data assets consumable by business users or BI reporting framework",
+            "Design and establish the cloud data architecture for more flexible data discovery and data governance",
+            "Developed BI reports and data visualization with Qlik Sense and Power BI. Need to engage with stakeholders from various departments regularly to understand their requirements."
         ],
         "visible": true
     },
@@ -36,7 +36,7 @@
         "title": "Data Scientist",
         "nature": "job",
         "details": [
-            "Incorporate investment research insights for enhancing existing investment strategies",
+            "Enhance and develop investment strategies based on research insights, machine learning, and deep learning techniques",
             "Lead a mobile app analytics project and establish the data architecture and data pipeline",
             "Build and deploy a full-stack containerized application to enable job submission to a task queue",
             "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"
