@@ -16,6 +16,7 @@ export const rowParse = (row, section) => {
         const [tagName, tooltip] = parseTag(x, section);
         if (!!tooltip) {
           return [
+            // <span className="tag" key={`tag-${i}`} hover-tooltip={`${tooltip}`}><span>{tagName}</span>
             <span className="tag" key={`tag-${i}`}><span>{tagName}</span>
               <div className="tooltip disable-select">{tooltip}</div>
             </span>,

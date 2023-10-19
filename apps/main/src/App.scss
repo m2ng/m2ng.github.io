@@ -545,3 +545,21 @@ li.skill:hover > .tooltip, span.tag:hover > .tooltip {
     top: initial;
     opacity: 1;
 }
+
+// li.skill:hover::before, span.tag:hover::before {
+//     content: attr(hover-tooltip);
+//     // font-size: 14px;
+//     // position: absolute;
+//     text-align: left;
+//     font-weight: 500;
+//     display: block;
+//     // top: initial;
+//     top: calc(100% + 5px);
+//     bottom: auto;
+//     min-width: 150px;
+//     max-width: 200px;
+//     background: hsl(39, 46%, 25%);
+//     border-radius: 4px;
+//     padding: 10px;
+//     color: #ffffff;
+// }
