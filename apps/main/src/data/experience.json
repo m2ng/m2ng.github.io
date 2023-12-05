@@ -7,10 +7,9 @@
         "title": "Data Engineer",
         "nature": "job",
         "details": [
-            "Initiate and provide #beginner-friendly_workshops for business users",
-            "Design and develop data pipelines on #Azure to generate data assets consumable by business users or BI reporting framework",
-            "Design and establish the cloud data architecture for more flexible data discovery and data governance",
-            "Developed BI reports and data visualization with Qlik Sense and Power BI. Need to engage with stakeholders from various departments regularly to understand their requirements."
+            "Initiated and conducted the very first Power BI #workshop for >10 business users",
+            "Designed and developed the data architecture on #Azure to generate data assets easily consumable by business users",
+            "Developed data visualizations with Qlik Sense to support >100 business users."
         ],
         "visible": true
     },
@@ -22,9 +21,9 @@
         "title": "Data Scientist",
         "nature": "job",
         "details": [
-            "Develop data-driven alerts built upon high volume of bank data for managing credit risk",
-            "Collaborate with global stakeholders to enhance the quality of the alerts",
-            "Propose new workflows and best practices for building data-driven solutions"
+            "Initiated and developed the automation of generating data-driven alerts built upon high volume of bank data for managing credit risk",
+            "Collaborated with global stakeholders to enhance the quality of the alerts",
+            "Proposed new workflows and best practices for building data-driven solutions"
         ],
         "visible": true
     },
@@ -36,10 +35,10 @@
         "title": "Data Scientist",
         "nature": "job",
         "details": [
-            "Enhance and develop investment strategies based on research insights, machine learning, and deep learning techniques",
-            "Lead a mobile app analytics project and establish the data architecture and data pipeline",
-            "Build and deploy a full-stack containerized application to enable job submission to a task queue",
-            "Deploy data applications such as data visualization tool and data streaming service with #Kubernetes"
+            "Initiated and deployed data applications such as data visualization tool and data streaming service with #Kubernetes",
+            "Developed investment strategies with machine learning models and made the backtesting process at least 4x faster",
+            "Led a mobile app analytics project and captured activities from >30 users.",
+            "Built and deployed a full-stack containerized application to enable more efficient scheduling of backtesting jobs."
         ],
         "visible": true
     },
@@ -70,7 +69,7 @@
         },
         "nature": "degree",
         "details": [
-            "Develop a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
+            "Developed a scalable machine learning method to enable association detection over a million of genetic loci for a million of individuals"
         ],
         "visible": true
     },
@@ -82,8 +81,8 @@
         "title": "Data Science Analyst",
         "nature": "job",
         "details": [
-            "Design and develop the #recommender_system for an e-commerce platform",
-            "Enable streaming of web analytics data to a #MongoDB database",
+            "Designed and developed the #recommender_system for an e-commerce platform",
+            "Enabled streaming of web analytics data to a #MongoDB database",
             "User behavior analysis driven by #Apache_Spark"
         ],
         "visible": true
