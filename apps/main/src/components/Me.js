@@ -17,7 +17,7 @@ export default function Me() {
       <div className="intro">
           {/* <p><strong>{">"}</strong> Hi, I am <strong>Matthew</strong>.</p> */}
           {/* <p><strong>{">"}</strong> I have a very strong interest in data, particularly in <span className="highlight-1">data science</span>, <span className="highlight-1">deep learning</span> and <span className="highlight-1">big data</span>. My willingness to learn allows me to familiarize myself with new things quickly and be open to others' opinions.</p> */}
-          <p><strong>{">"}</strong> I have 5 years' experience in data science: 3 years' work experience and 2 years' research experience.</p>
+          <p><strong>{">"}</strong> I have 6 years' experience in data science: 4 years' work experience and 2 years' research experience.</p>
       </div>
     </div>
   );
