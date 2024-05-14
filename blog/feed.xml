@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://m2ng.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://m2ng.github.io/blog/" rel="alternate" type="text/html" /><updated>2024-05-14T08:37:24-05:00</updated><id>https://m2ng.github.io/blog/feed.xml</id><title type="html">My ultimate sophistication</title><subtitle>Hi, I am Matthew. I talk about data science, computer tricks, and anything I find interesting here.
+</subtitle><author><name>Matthew Ng</name><email>ngmhmatthew@gmail.com</email></author><entry><title type="html">The first workshop I gave in my life🎉</title><link href="https://m2ng.github.io/blog/work/2023/05/13/the-first-workshop-i-gave-in-my-life.html" rel="alternate" type="text/html" title="The first workshop I gave in my life🎉" /><published>2023-05-13T00:00:00-05:00</published><updated>2023-05-13T00:00:00-05:00</updated><id>https://m2ng.github.io/blog/work/2023/05/13/the-first-workshop-i-gave-in-my-life</id><content type="html" xml:base="https://m2ng.github.io/blog/work/2023/05/13/the-first-workshop-i-gave-in-my-life.html"><![CDATA[<div class="picture"><figure><picture>
+        <!-- Large screens -->
+        <source media="(min-width: 415px)" srcset="/assets/img/first_workshop-lg.jpg" />
+        <!-- Small screens -->
+        <source media="(max-width: 414px)" srcset="/assets/img/first_workshop-sm.jpg" />
+        <!-- Fallback --><img src="/assets/img/first_workshop-lg.jpg" alt="" class="img-fluid figure-img" /></picture><figcaption>Professional shot by Connie Yu</figcaption>
+    </figure></div>
+
+<p>This is the first technical workshop I have ever initiated and conducted for laymen in my life.</p>
+
+<p>In the very first month I joined this company, I had a chat with my line manager about the overall data literacy here. She doesn’t feel quite right with it. I then asked: why don’t we make a workshop for them?</p>
+
+<p>Luckily her boss is fine with the idea. We could finally prepare for the workshop. There were so many challenges in the past two months, from setting up necessary data infrastructure to preparing workshop tutorials.  I was so anxious about the number of participants and whether the participants would actually be interested in the things I introduce in the workshop.</p>
+
+<p>It turns out that the participants are positive about the service we are building for them. They also like my teaching style. There is certainly room for improvement but in general the result is satisfactory, given that we never had any experience making workshops before.</p>
+
+<p>Doesn’t this seem unnatural for what a Data Engineer should do? Data Engineers are people wrangling with data and preparing data assets consumable by other data analysts/business users. They are usually stereotyped as technical guys who cannot speak human. If my title is Data Scientist, probably everything makes a little bit more sense.</p>
+
+<p>Perhaps I am someone who doesn’t like to be defined by a role. I want to shape my own role. If I am an artist who makes a living by crafting pretty 3D artwork, I don’t have to be someone who makes fancier artwork. Instead, I can be an artist who sings as well. 🙂</p>
+
+<p>Generally I enjoyed what I did to make this workshop possible. I love talking to people. This first step is a small but really important one. This workshop signifies the beginning of an exciting journey of altering the data landscape of a big corporation. Let’s see how far we can go.</p>
+
+<p>Special thanks must be given to Shirley Kwan, who is my line manager and a really encouraging leader. I want to thank Elton Ho, Marco Ho, Connie Yu and many other people including the workshop participants for their great support. The workshop would not be possible without them.</p>]]></content><author><name>Matthew Ng</name><email>ngmhmatthew@gmail.com</email></author><category term="work" /><summary type="html"><![CDATA[Professional shot by Connie Yu]]></summary></entry><entry><title type="html">Python skills every responsible data scientist should know</title><link href="https://m2ng.github.io/blog/python/2022/07/08/python-skills-every-data-scientist-should-know.html" rel="alternate" type="text/html" title="Python skills every responsible data scientist should know" /><published>2022-07-08T00:00:00-05:00</published><updated>2022-07-08T00:00:00-05:00</updated><id>https://m2ng.github.io/blog/python/2022/07/08/python-skills-every-data-scientist-should-know</id><content type="html" xml:base="https://m2ng.github.io/blog/python/2022/07/08/python-skills-every-data-scientist-should-know.html"><![CDATA[<p>The use of Python is prevalent in the data science field because of its expressiveness and huge community support on data-related tasks. Python is usually seen as the tool just to get things done. When data scientists are trying to develop a Python module for automating data-related tasks, they tend to apply what they used to be doing with the notebook to the Python module.</p>
+
+<p>For most of the time, you can always find production code defining complicated functions without comments explaining what the functions are doing. Sometimes, you even need to do extra work to make the production code work in your machine.</p>
+
+<p>Many of these problems are not fatal. The reality is that usually a codebase is not maintained or used by a single person. If we are developing a codebase that is supposed to be re-used by some other people in the team, it is our responsibility to make the code <em>maintainable</em> and <em>portable</em>.</p>
+
+<p>By maintainable, it means that someone who has not worked with the codebase before should be able to understand what the functions inside the codebase are doing very quickly. By portable, it means that someone can easily import or re-use the code without doing extra and tedious configurations to make the code work.</p>
+
+<p>Here are my top 4 suggestions to make your code more maintainable and portable:</p>
+
+<h3 id="1-annotate-and-document-your-code-with-meaningful-explanations">1. Annotate and document your code with meaningful explanations</h3>
+
+<p>Here is an example why commenting your code is important:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_vol</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Without someone telling you what the context is, you should basically have no idea whether the word “vol” in the function name refers to “volume” or “volatility”.</p>
+
+<p>So, tell other users what the code is doing by adding comments and using meaningful variable names:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span>
+
+<span class="k">def</span> <span class="nf">get_naruto_volume</span><span class="p">(</span><span class="n">volume_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                      <span class="n">is_shippuden</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                      <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                      <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="s">"""
+    Return the local path to the Naruto volume.
+    
+    Parameters
+    ----------
+    volume_number : int
+        The volume number. Starts from 1.
+    is_shippuden : bool
+        Return Naruto Shippuden (Part II) volume.
+    *args, **kwargs
+        Additional arguments and keywords (For compatibility)
+    """</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Comment your code in such a way that a newbie will understand. Sometimes, if the outputs of some of the functions you defined are predictable, specify them in the comment as well.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">rmse</span><span class="p">(</span><span class="n">true</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pred</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">float64</span><span class="p">:</span>
+    <span class="s">"""
+    Return the square root of mean-squared error of `true` and `pred`.
+
+    Parameters
+    ----------
+    true: np.ndarray
+        Expected output in NumPy array.
+    pred: np.ndarray
+        Predicted output in NumPy array.
+    
+    Returns
+    -------
+    scalar
+        The root mean-squared error.
+
+    Examples
+    --------
+    &gt;&gt;&gt; a = np.array([1., 2., 3.])
+    &gt;&gt;&gt; b = np.array([-1., -2., -3.])
+    &gt;&gt;&gt; rmse(a, b)
+    4.320493798938574
+    """</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">power</span><span class="p">(</span><span class="n">true</span> <span class="o">-</span> <span class="n">pred</span><span class="p">,</span> <span class="mf">2.</span><span class="p">).</span><span class="n">mean</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>The advantage of listing examples in this format is that the lines starting with <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code> can be recognized by <a href="https://docs.python.org/3/library/doctest.html">doctest</a>, which is a built-in Python module for testing whether functions provide outputs stated in function <a href="https://en.wikipedia.org/wiki/Docstring">docstrings</a>.</p>
+
+<h3 id="2-make-a-unique-virtual-environment-for-every-single-project">2. Make a unique virtual environment for every single project</h3>
+<p>Unless projects share the example same configurations and dependencies, consider setting up a unique virtual environment for every single project.</p>
+
+<p>I strongly recommend using <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a> because it allows one to specify the module dependencies, Python version and many other things in the desired virtual environment in a configuration file. Dependency lock is also supported to protect other users from packages tampered by a third party.</p>
+
+<p>Install Pipenv in your user install directory by running <code class="language-plaintext highlighter-rouge">python -m pip install --user pipenv</code>. Then, run <code class="language-plaintext highlighter-rouge">pipenv shell</code> in your project root directory will get you into the virtual environment.</p>
+
+<p>In some circumstances, you may want to have the virtual environment sitting inside your project root directory. You may export an environment variable <code class="language-plaintext highlighter-rouge">PIPENV_VENV_IN_PROJECT=1</code> and then run <code class="language-plaintext highlighter-rouge">pipenv shell</code> in the location you want the virtual environment to be.</p>
+
+<h3 id="3-make-your-package-portable">3. Make your package portable</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'/opt/packages'</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">generic_data_wrangler</span> <span class="k">as</span> <span class="n">gdw</span>
+</code></pre></div></div>
+<p>This example demonstrates a common pattern of importing a package in a lot of data science codebase. In production environments, especially in those writes to the default site-packages folder are forbidden, this pattern can come in pretty handy for someone to test whether a package works or not as intended.</p>
+
+<p>However, this pattern generally leads to unmaintainable and non-portable code especially when there are multiple nodes with different Python versions and CPU architectures if the package is to be shared across these nodes. Besides, you are solely responsible for managing the dependency conflicts.</p>
+
+<p>Consider wrapping your Python module with a parent folder with the same name:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">generic_data_wrangler</span><span class="o">/</span>
+<span class="o">+--</span> <span class="n">static_assets</span>
+<span class="o">+--</span> <span class="n">src</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">generic_data_wrangler</span><span class="o">/</span>          <span class="c1"># The actual Python package you write
+</span><span class="o">|</span>       <span class="o">+--</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="n">wranglers</span><span class="p">.</span><span class="n">py</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="n">base</span><span class="p">.</span><span class="n">py</span>
+<span class="o">|</span>       <span class="p">...</span>
+<span class="o">+--</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span>                            <span class="c1"># An important file to make your Python
+</span>                                        <span class="c1"># package installable
+</span></code></pre></div></div>
+
+<p>There are so many <a href="https://docs.python.org/3/distutils/setupscript.html">different ways</a> of defining the <code class="language-plaintext highlighter-rouge">setup.py</code>. Here is one example:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'Generic Data Wrangler'</span><span class="p">,</span>
+      <span class="n">version</span><span class="o">=</span><span class="s">'1.0'</span><span class="p">,</span>
+      <span class="n">description</span><span class="o">=</span><span class="s">'As the name suggests, it is for wrangling different types of data'</span><span class="p">,</span>
+      <span class="n">author</span><span class="o">=</span><span class="s">'Foo Bar'</span><span class="p">,</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s">'generic_data_wrangler'</span><span class="p">],</span>
+      <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s">'generic_data_wrangler'</span><span class="p">:</span> <span class="s">'src/generic_data_wrangler'</span><span class="p">},</span>
+      <span class="n">package_data</span><span class="o">=</span><span class="p">{</span><span class="s">'generic_data_wrangler'</span><span class="p">:</span> <span class="p">[</span><span class="s">'static_assets/**/*.yaml'</span><span class="p">]})</span>
+</code></pre></div></div>
+
+<p>So, if someone is working with a virtual environment and copies the entire folder at which the root consists of the <code class="language-plaintext highlighter-rouge">setup.py</code> to somewhere, the package can be installed to the virtual environment by running <code class="language-plaintext highlighter-rouge">python setup.py install</code> at the location where the <code class="language-plaintext highlighter-rouge">setup.py</code> is in.</p>
+
+<h3 id="4-store-your-intermediate-tabular-results-in-a-portable-database">4. Store your intermediate tabular results in a portable database</h3>
+<p>There is nothing wrong to store a table in a CSV file if the table is small. However, if the table is big (e.g. a set of metrics with more than 10000 rows and 100 columns), I suggest that you should store the table in a portable database like what SQLite offers.</p>
+
+<p>SQLite is fast and lightweight. Not only that, SQLite is also battle-tested and is ACID-compliant. One common use case of SQLite is storing tabular data in a small application. By default, SQLite 3 support is baked into a Python 2.5+ distribution. Try to run <code class="language-plaintext highlighter-rouge">import sqlite3</code> in your Python interpreter to see if it works or not.</p>
+
+<p>I have run an experiment to show you how storing a pandas DataFrame in a SQLite database is faster and more space-efficient than saving it to a CSV file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"""
+store_your_intermediate_results_in_sqlite.py
+"""</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+
+
+<span class="k">def</span> <span class="nf">get_sample_data</span><span class="p">(</span><span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="n">f</span><span class="p">.</span><span class="n">name</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_row</span><span class="p">)]})</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">)),</span>
+                          <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s">'v</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_col</span><span class="o">+</span><span class="mi">1</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">((</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">test_save_to_sqlite_db</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'./test.db'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">FileNotFoundError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">sqlite3</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="s">'./test.db'</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s">'test'</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">test_save_to_csv</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'./test.csv'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">FileNotFoundError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'./test.csv'</span><span class="p">)</span>
+
+
+<span class="n">trials</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="p">[</span><span class="s">'sqlite'</span><span class="p">,</span> <span class="s">'csv'</span><span class="p">]))</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">trials</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'n_row'</span><span class="p">,</span> <span class="s">'n_col'</span><span class="p">,</span> <span class="s">'method'</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[[</span><span class="s">'size'</span><span class="p">,</span> <span class="s">'time'</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">results</span><span class="p">.</span><span class="n">set_index</span><span class="p">([</span><span class="s">'n_row'</span><span class="p">,</span> <span class="s">'n_col'</span><span class="p">,</span> <span class="s">'method'</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">get_sample_data</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">index</span><span class="p">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s">'n_row'</span><span class="p">).</span><span class="nb">max</span><span class="p">(),</span>
+                    <span class="n">results</span><span class="p">.</span><span class="n">index</span><span class="p">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s">'n_col'</span><span class="p">).</span><span class="nb">max</span><span class="p">())</span>
+
+<span class="n">methods</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'sqlite'</span><span class="p">:</span> <span class="n">test_save_to_sqlite_db</span><span class="p">,</span>
+    <span class="s">'csv'</span><span class="p">:</span> <span class="n">test_save_to_csv</span>
+<span class="p">}</span>
+
+<span class="n">file_ext</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'sqlite'</span><span class="p">:</span> <span class="s">'db'</span><span class="p">,</span>
+    <span class="s">'csv'</span><span class="p">:</span> <span class="s">'csv'</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">,</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">trials</span><span class="p">:</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">methods</span><span class="p">[</span><span class="n">method</span><span class="p">]</span> 
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+        <span class="n">fn</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">n_row</span><span class="p">,</span> <span class="p">:</span><span class="n">n_col</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">results</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">,</span> <span class="n">method</span><span class="p">].</span><span class="n">loc</span><span class="p">[</span><span class="s">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">50</span>
+    <span class="n">results</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">,</span> <span class="n">method</span><span class="p">].</span><span class="n">loc</span><span class="p">[</span><span class="s">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="sa">f</span><span class="s">"test.</span><span class="si">{</span><span class="n">file_ext</span><span class="p">[</span><span class="n">method</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">'size'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">results</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s">'size'</span><span class="p">:</span> <span class="s">'size (bytes)'</span><span class="p">,</span> <span class="s">'time'</span><span class="p">:</span> <span class="s">'average elapsed time (seconds)'</span> <span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>The summary of the simulated trials is as follows:</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="2" halign="left">size (bytes)</th>
+      <th colspan="2" halign="left">average elapsed time (seconds)</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>method</th>
+      <th>csv</th>
+      <th>sqlite</th>
+      <th>csv</th>
+      <th>sqlite</th>
+    </tr>
+    <tr>
+      <th>n_row</th>
+      <th>n_col</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">1000</th>
+      <th>10</th>
+      <td>210687</td>
+      <td>139264</td>
+      <td>0.009795</td>
+      <td>0.015823</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>981482</td>
+      <td>536576</td>
+      <td>0.043167</td>
+      <td>0.026356</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>1945243</td>
+      <td>1048576</td>
+      <td>0.084597</td>
+      <td>0.042316</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">5000</th>
+      <th>10</th>
+      <td>1058741</td>
+      <td>643072</td>
+      <td>0.046930</td>
+      <td>0.030381</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>4912086</td>
+      <td>2637824</td>
+      <td>0.214578</td>
+      <td>0.077766</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>9729717</td>
+      <td>5201920</td>
+      <td>0.419790</td>
+      <td>0.130800</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">10000</th>
+      <th>10</th>
+      <td>2118781</td>
+      <td>1273856</td>
+      <td>0.093032</td>
+      <td>0.047522</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>9826049</td>
+      <td>5259264</td>
+      <td>0.429206</td>
+      <td>0.137854</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>19461683</td>
+      <td>10391552</td>
+      <td>0.840291</td>
+      <td>0.242439</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Except for the cases when there are only 10 columns and 1000/5000 rows, most of the time SQLite provides at least 2x speed-up on average and the resulted file is 50% smaller than the CSV version.</p>]]></content><author><name>Matthew Ng</name><email>ngmhmatthew@gmail.com</email></author><category term="python" /><summary type="html"><![CDATA[The use of Python is prevalent in the data science field because of its expressiveness and huge community support on data-related tasks. Python is usually seen as the tool just to get things done. When data scientists are trying to develop a Python module for automating data-related tasks, they tend to apply what they used to be doing with the notebook to the Python module.]]></summary></entry></feed>
