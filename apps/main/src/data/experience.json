@@ -1,7 +1,17 @@
 [
     {
-        "time": "12/2022 — Present",
+        "time": "02/2025 — Present",
         "effective": true,
+        "place": "JPMorgan Chase",
+        "url": "https://www.jpmorgan.com/",
+        "title": "Applied AI/ML",
+        "nature": "job",
+        "details": [],
+        "visible": true
+    },
+    {
+        "time": "12/2022 — 02/2025",
+        "effective": false,
         "place": "Swire Properties Limited",
         "url": "https://www.swireproperties.com/",
         "title": "Data Engineer",

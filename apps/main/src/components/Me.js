@@ -14,11 +14,7 @@ export default function Me() {
           <li className="contact-method"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span><a href="https://m2ng.github.io/">m2ng.github.io</a><span style={{marginLeft:"2px", marginRight:"2px"}}>/</span><a href="https://m2ng.github.io/blog/">blog</a></span></li>
           {/* <li className="contact-method"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="18px" height="18px" viewBox="0 0 24 24" fill="black"><path d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z" /></svg><a href="https://m2ng.github.io/blog/">m2ng.github.io/blog</a></li> */}
       </ul>
-      <div className="intro">
-          {/* <p><strong>{">"}</strong> Hi, I am <strong>Matthew</strong>.</p> */}
-          {/* <p><strong>{">"}</strong> I have a very strong interest in data, particularly in <span className="highlight-1">data science</span>, <span className="highlight-1">deep learning</span> and <span className="highlight-1">big data</span>. My willingness to learn allows me to familiarize myself with new things quickly and be open to others' opinions.</p> */}
-          <p><strong>{">"}</strong> I have 6 years' experience in data science: 4 years' work experience and 2 years' research experience.</p>
-      </div>
+      <div className="intro"></div>
     </div>
   );
 }
