@@ -1,50 +1,15 @@
 {
-  "name": "m2ng.github.io",
-  "version": "2.1.0",
-  "description": "This is a new version of my résumé created using HTML, CSS, several open-source web fonts and SVGs only.",
+  "name": "m2ng-cv",
+  "version": "3.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "gh-pages": "^3.2.3",
-    "sass": "^1.42.1"
-  },
-  "bugs": {
-    "url": "https://github.com/m2ng/m2ng.github.io/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m2ng/m2ng.github.io.git"
-  },
+  "type": "module",
+  "description": "Static CV for Matthew Ng. Built with Bun into plain HTML/CSS that renders without JavaScript.",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages --dist 'build' --branch 'gh-pages'"
+    "build": "bun run build.js",
+    "preview": "bun run build.js && bun run serve.js",
+    "clean": "rm -rf ../../build"
   },
-  "homepage": "https://m2ng.github.io",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }
