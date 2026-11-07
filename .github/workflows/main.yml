@@ -24,7 +24,7 @@ jobs:
         CV_OUT=$BUILD_PATH bun run build
         echo $PWD/build
     - name: Upload built CV
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: main-app
         path: ${{ env.BUILD_PATH }}
@@ -48,7 +48,7 @@ jobs:
         echo; echo;
         ls $JEKYLL_ROOT/_site
     - name: Upload built blog
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: blog-app
         path: ${{ env.JEKYLL_ROOT }}/_site
@@ -85,7 +85,7 @@ jobs:
     #   with:
     #     path: ${{ env.CURRENT_DIR }}
     - name: "Download all artifacts"
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         path: .
     - name: Pack and cleanup
