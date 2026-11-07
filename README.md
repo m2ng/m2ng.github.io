@@ -1,5 +1,13 @@
 # Résumé + Blog
-This is a new version of my résumé. The homepage is created using React while the blog is created using Jekyll.
+This is a new version of my résumé. The homepage is a static CV built with [Bun](https://bun.sh) (plain HTML + CSS, renders without JavaScript) while the blog is created using Jekyll.
+
+## Build the CV
+```
+cd apps/main
+bun install
+bun run build      # emits the static site into <repo>/build
+bun run preview    # build + serve at http://localhost:4321
+```
 
 ## Preview
 ![preview](./resume_preview.png)

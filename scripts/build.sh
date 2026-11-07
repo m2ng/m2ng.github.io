@@ -1,11 +1,9 @@
 #!/bin/sh
+# Build the CV (Bun static site) and the blog (Jekyll) into ./build.
 
-mkdir -p $PWD/build/
-docker build -t m2ng-github-io-react-base -f Dockerfile.react .
-docker run \
-    --rm --entrypoint /bin/sh \
-    -v "$PWD/build:/app/build" \
-    -v "$PWD/public:/app/public" \
-    -v "$PWD/apps/main:/app/src" m2ng-github-io-react-base \
-    -c "npm run build"
-bash ./jekyll.sh build
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+mkdir -p build/
+(cd apps/main && bun install && CV_OUT="$ROOT/build" bun run build)
+bash scripts/jekyll.sh build

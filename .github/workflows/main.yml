@@ -10,23 +10,18 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'no-ci')"
     name: Build CV
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
     - name: Build CV
       run: |
         BUILD_PATH="$PWD/build"
         echo "BUILD_PATH=$BUILD_PATH" >> $GITHUB_ENV
         mkdir -p $BUILD_PATH
         cd apps/main
-        npm install
-        BUILD_PATH=$BUILD_PATH npm run build
+        bun install
+        CV_OUT=$BUILD_PATH bun run build
         echo $PWD/build
     - name: Upload built CV
       uses: actions/upload-artifact@v3
